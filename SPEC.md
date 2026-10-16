@@ -15,7 +15,7 @@ A normal store answers the question you asked. A graph lets you start from the t
 A fictional B2B software company. Charlene, a product manager, asks: *"Why did these five customers leave?"* (the five customers who churned in Q3 2026).
 
 - **Flat view:** each churned customer's CRM record gives a different reason — price, a missing feature, moved to a competitor, building in-house, budget. No pattern.
-- **Graph view:** all five raised support tickets (about *different* features) that were routed to the **Integrations queue**, which was **retired in the March 2026 support reorg**. Nobody has watched it since. **Maria**, the integrations support lead, commented on the reorg plan that the routing rule still needed updating.
+- **Graph view:** all five raised support tickets (about *different* features) that were routed to the **Integrations queue**, which was **retired in the March 2026 support reorg**. Nobody has watched it since. **Daniela**, the integrations support lead, commented on the reorg plan that the routing rule still needed updating.
 - **Base rate:** of the **17** customers with tickets routed to that queue since it was retired, **5 have churned (29%)**, versus **2 of the other 50 (4%)**.
 - **Forward-looking:** the other **12** of those 17 are still customers, and all have **open tickets** sitting in the dead queue right now.
 
@@ -23,7 +23,7 @@ The wander path the article shows:
 
 ```
 Customer -[RAISED]-> Ticket -[ROUTED_TO]-> Queue(Integrations) -[RETIRED_BY]-> Decision(Support reorg)
-  -[DOCUMENTED_IN]-> Document(Reorg plan) <-[COMMENTED_ON]- Person(Maria)
+  -[DOCUMENTED_IN]-> Document(Reorg plan) <-[COMMENTED_ON]- Person(Daniela)
 Queue(Integrations) <-[ROUTED_TO]- open Ticket <-[RAISED]- 12 other Customers
 ```
 
@@ -159,11 +159,20 @@ About **67 customers, ~250 tickets, 4 queues, 8 features, 3 decisions, ~6 docume
 - Every customer, including the five, has some ordinary tickets in General/Billing/Platform (noise).
 
 ### Decisions and documents
-- **Support reorg** (2026-03-02) — retires the Integrations queue. `DOCUMENTED_IN` → **Reorg plan** document. **Maria** (role: Integrations support lead) has a `COMMENTED_ON` edge to the reorg plan, dated 2026-03-04, with text along the lines of: *"Before we retire the Integrations queue, the routing rule still sends integration tickets there — we need to update it or they'll go nowhere."*
+- **Support reorg** (2026-03-02) — retires the Integrations queue. `DOCUMENTED_IN` → **Reorg plan** document. **Daniela** (role: Integrations support lead) has a `COMMENTED_ON` edge to the reorg plan, dated 2026-03-04, with text along the lines of: *"Before we retire the Integrations queue, the routing rule still sends integration tickets there — we need to update it or they'll go nowhere."*
 - **Pricing update** (2026-01-10) and **New SLA policy** (2026-05-20) — noise decisions with their own documents and a comment or two from other people.
 
 ### People
-Charlene (Product manager), Maria (Integrations support lead), Tom (Head of Partnerships), 4 account managers, ~4 support agents, a CFO, a Head of Customer Success, and a couple of others. The 5 churned customers are managed by **at least 3 different** account managers (no account manager manages 3 or more of them), so `MANAGES` scatters and gets pruned.
+Use these names:
+- **Charlene** — Product manager
+- **Daniela** — Integrations support lead
+- **Tom** — Head of Partnerships
+- **Anshit, Andrew, Jenny** — Account managers
+- **Dominus** — Head of Customer Success
+- **Mike** — CFO
+- ~4 support agents and a couple of others (any names)
+
+The 5 churned customers are spread across all three account managers, split 2 / 2 / 1 (no account manager manages 3 or more of them), so `MANAGES` scatters and gets pruned.
 
 ### Hidden data for the ontology demo (generated, not declared initially)
 Generate these in the JSON, but leave them out of `ontology.initial.yaml`:
@@ -185,7 +194,7 @@ wander(anchors: list[str], max_hops: int = 5, explain_hops: int = 3,
 1. **Expand.** Breadth-first from all anchors at once, following only relationship types declared in the ontology, in both directions, up to `max_hops`. Stop expanding when `max_nodes` is reached and set `truncated: true` (the guardrail should be visible, not silent). For every node reached, record **which anchors** reached it and the shortest path from each.
 2. **Converge.** A node's **support** is the share of anchors that reach it. Candidate convergence nodes have `support >= min_support` (default: 3 of 5).
 3. **Discount hubs (lift).** For each candidate, compute how many of the anchors' population (all nodes with the anchors' label, e.g. all 67 customers) reach it via the **same relationship pattern** the anchors used. `lift = support / (population_reach / population_size)`. Keep candidates with `lift >= min_lift`. Expected: Integrations queue lift ≈ 2.5 (kept); General support ≈ 1.1 (pruned). This is the "keep where the paths converge *more than you'd expect by chance*" rule.
-4. **Explain.** From each kept convergence node, walk up to `explain_hops` further and keep the neighbours that aren't hubs (Decision → Document → Person, with edge properties such as Maria's comment text and dates).
+4. **Explain.** From each kept convergence node, walk up to `explain_hops` further and keep the neighbours that aren't hubs (Decision → Document → Person, with edge properties such as Daniela's comment text and dates).
 5. **Who else shares the thread.** For each kept convergence node, list the other population nodes that reach it via the same pattern (not anchors), with the properties of the intermediate nodes and edges (e.g. ticket status, routed_at). This is how the 12 at-risk customers surface.
 6. **Return** a structured result: anchors, kept convergence nodes (with support, lift, population reach), pruned candidates (name + reason, so the pruning is explainable), explanation subgraph, other members, all **paths as readable hop lists** with edge properties, plus stats (nodes visited, nodes returned, truncated, approximate token size).
 
@@ -200,7 +209,7 @@ compare_base_rate(node_id: str, pattern: list[str] | None = None,
 Compares the outcome rate for population nodes that reach `node_id` via the pattern (optionally only edges dated on/after `since`) against everyone else. Returns counts, rates, and a one-line plain-English summary. For the Integrations queue with `since="2026-03-15"`: **5/17 (29%) vs 2/50 (4%)**. The summary must say it's a signal, not proof (association, not causation — the article leaves causal inference for a sequel).
 
 ### `get_details`
-Full properties and immediate edges of one node — so Claude can read a ticket or Maria's comment in full.
+Full properties and immediate edges of one node — so Claude can read a ticket or Daniela's comment in full.
 
 ## 7. Ontology tools
 
@@ -231,7 +240,7 @@ This simulates the typical "records + search" setup most teams have today. It mu
 - `get_record(id)` — one record's own fields.
 - `list_records(type, filters)` — simple filtered listing (e.g. customers with status churned and churned_at in Q3 2026), so Claude can find Charlene's five without guessing.
 
-No arbitrary SQL, no joins across tables. Nothing is hidden: ticket rows include their queue name, and the reorg plan with Maria's comment is searchable. If Claude pieces the pattern together anyway, that's a legitimate result — record it honestly. The point the comparison makes is that the ordinary store can only answer what you think to ask; the graph walks to things you didn't know to ask about. The README should say this plainly, including that a store exposing raw SQL could in principle join its way to the answer — but only if you already knew which question to ask.
+No arbitrary SQL, no joins across tables. Nothing is hidden: ticket rows include their queue name, and the reorg plan with Daniela's comment is searchable. If Claude pieces the pattern together anyway, that's a legitimate result — record it honestly. The point the comparison makes is that the ordinary store can only answer what you think to ask; the graph walks to things you didn't know to ask about. The README should say this plainly, including that a store exposing raw SQL could in principle join its way to the answer — but only if you already knew which question to ask.
 
 ### Graph toolset
 Backed by Neo4j (or `--store memory`). Tools: `wander`, `compare_base_rate`, `get_details`, `find` (look up nodes by name/type/filters, e.g. customers churned since 2026-07-01), `view_ontology`, `propose_change`.
@@ -277,7 +286,7 @@ python -m wander.cli wander --churned-since 2026-07-01 --max-hops 1
 python -m wander.cli wander --churned-since 2026-07-01 --max-hops 6 --no-prune
 python -m wander.cli wander --anchors cust_014,cust_022 --format json
 python -m wander.cli base-rate "Integrations" --since 2026-03-15
-python -m wander.cli details "Maria"
+python -m wander.cli details "Daniela"
 python -m wander.cli records search "churn"            # what the Records agent sees
 python -m wander.cli records list customers --status churned --since 2026-07-01
 python -m wander.cli ontology show | propose ... | reset
@@ -290,7 +299,7 @@ python -m wander.cli viewer
 
 ## 12. `queries/wander.cypher`
 
-One hand-written Cypher query that a reader can paste into Neo4j Browser to see Charlene's path drawn as a graph: from the five Q3-churned customers, through their tickets, to the Integrations queue, the reorg decision, the plan document and Maria's comment. Commented for a non-expert reader. This is for the article's screenshot — the real logic lives in Python.
+One hand-written Cypher query that a reader can paste into Neo4j Browser to see Charlene's path drawn as a graph: from the five Q3-churned customers, through their tickets, to the Integrations queue, the reorg decision, the plan document and Daniela's comment. Commented for a non-expert reader. This is for the article's screenshot — the real logic lives in Python.
 
 ## 13. README
 
@@ -320,7 +329,7 @@ No auth or user accounts, no agent framework (plain SDK loop), no LLM calls outs
 - `generate.py` is deterministic: two runs produce byte-identical JSON.
 - Exactly 5 customers churned in Q3 2026, with 5 different churn reasons; 2 others churned in H1 2026.
 - 17 customers have Integrations tickets routed after 2026-03-15; 5 churned, 12 active, each of the 12 with ≥1 open ticket there.
-- `wander --churned-since 2026-07-01` returns the **Integrations queue** as the top convergence node; prunes **General support** (low lift), the **features** (low support) and **MANAGES/account managers** (low support), each with a stated reason; the explanation includes the Support reorg decision, the reorg plan and **Maria's comment**; "other members" includes the 12 at-risk customers with their open tickets.
+- `wander --churned-since 2026-07-01` returns the **Integrations queue** as the top convergence node; prunes **General support** (low lift), the **features** (low support) and **MANAGES/account managers** (low support), each with a stated reason; the explanation includes the Support reorg decision, the reorg plan and **Daniela's comment**; "other members" includes the 12 at-risk customers with their open tickets.
 - The records store and the graph are loaded from the same generated JSON: the same 67 customers, ticket counts and documents are visible through both toolsets.
 - The records toolset's `list_records` returns Charlene's five churned customers with their five different churn reasons; nothing in its tools or descriptions points at the Integrations queue.
 - In the chat app, both agents use the same model and system prompt (asserted in a test), keep separate histories, and every tool call appears as a readable Chainlit step.
