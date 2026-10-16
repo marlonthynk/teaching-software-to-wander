@@ -33,7 +33,7 @@ Queue(Integrations) <-[ROUTED_TO]- open Ticket <-[RAISED]- 12 other Customers
   - **Records** — an ordinary store: **SQLite** tables (customers, tickets, documents, people, decisions) with keyword search on top. This is what most teams' setups look like. No Docker needed.
   - **Graph** — **Neo4j 5 Community** in Docker (`docker compose up -d`), with the wander loop.
   - Both are loaded from the **same generated JSON**. Same data, same Claude, same question; the only difference is the store underneath and what that lets the tools do.
-- **The main way to run it is a Chainlit chat app** (`chainlit run app.py`). Every question is answered twice in the same thread: first by a **"Records"** agent, then by a **"Graph"** agent. Each tool call shows up as a collapsible Chainlit step, so readers can open the wander and see the exact paths and raw context Claude received. Needs an `ANTHROPIC_API_KEY`.
+- **The main way to run it is a Chainlit chat app** (`chainlit run app.py`). It has two modes — **Records** and **Graph** — chosen per chat; readers ask a question in Records, then switch to Graph and ask it again. Each tool call shows up as a collapsible Chainlit step, so readers can open the wander and see the exact paths and raw context Claude received. Needs an `ANTHROPIC_API_KEY`.
 - **Optional MCP servers** for readers without an API key: the same two toolsets exposed over MCP, for Claude Desktop, Claude Code or any MCP client. Thin wrappers — no logic of their own.
 - **A CLI** that returns the raw context with no LLM involved, for testing and for the article.
 - **Python 3.11+**, managed with `uv`. Libraries: `chainlit`, `anthropic`, `neo4j` (driver), `mcp` (official Python SDK, FastMCP), `pyyaml`, `typer` (CLI), `pytest`. SQLite via the standard library (`sqlite3`, FTS5 for search).
@@ -308,17 +308,18 @@ Tool descriptions for both sets: short, clear, same tone, and no hints that stee
 
 ## 9. The chat app (`app.py`, Chainlit)
 
-`chainlit run app.py` opens a chat. The welcome screen (`chainlit.md`) explains the experiment in three lines and suggests Charlene's question.
+`chainlit run app.py` opens a chat. The welcome screen (`chainlit.md`) explains the experiment in three lines and suggests the flow: ask Charlene's question in **Records**, then switch to **Graph** and ask it again.
 
-### How a question is answered
-1. The user types one question.
-2. The **Records** agent answers first (Chainlit message author "Records"), using only the records toolset.
-3. The **Graph** agent answers second (author "Graph"), using only the graph toolset.
-4. Each agent's tool calls appear as **collapsible Chainlit steps** inside its answer — e.g. "wander from 5 customers (4 hops, 23 nodes kept, 3 candidates pruned)". Opening the step shows the readable paths and the raw context Claude received. These steps are the article's screenshots, so make them clean and readable, not raw JSON by default (JSON available inside, collapsed).
+### Two modes: Records and Graph
+The app has exactly two modes, implemented as **Chainlit chat profiles**: **Records** (default) and **Graph**. There is no "both" mode. Each chat runs in one mode, with one agent, one toolset and one author name on its messages ("Records" or "Graph"), so readers always know which store they're talking to.
+
+- Switching profile starts a **new chat**, so the two modes never share a conversation and one answer can't leak into the other.
+- Each agent's tool calls appear as **collapsible Chainlit steps** inside its answer — e.g. "wander from 5 customers (4 hops, 23 nodes kept, 3 candidates pruned)". Opening the step shows the readable paths and the raw context Claude received. These steps are the article's screenshots, so make them clean and readable, not raw JSON by default (JSON available inside, collapsed).
+- Each profile has a one-line description in the profile picker: Records — "an ordinary store: records and keyword search"; Graph — "the same data as a graph the agent can wander".
 
 ### Fairness rules (non-negotiable)
-- **Same model, same system prompt, same settings** for both agents. One shared system prompt in `wander/prompts.py`; the only difference is the tool list.
-- **Separate conversation histories.** Each agent only ever sees its own history in the thread, so the Graph answer can't leak into the Records agent's next turn, or vice versa.
+- **Same model, same system prompt, same settings** in both modes. One shared system prompt in `wander/prompts.py`; the only difference is the tool list.
+- **Separate conversations.** Each mode is its own chat, so neither agent ever sees the other's answer.
 - The system prompt is neutral: be a helpful analyst for this company, use your tools, say how confident you are, cite what you found. No mention of queues, reorgs or the planted pattern.
 - The Graph agent is told to cite the paths `wander` returns and to treat `compare_base_rate` as a signal, not proof.
 
@@ -326,7 +327,6 @@ Tool descriptions for both sets: short, clear, same tone, and no hints that stee
 A plain Anthropic SDK tool-use loop (no agent framework): send messages + tools, run any requested tools via `tools.py`, feed results back, repeat until Claude answers, with a **max of 8 tool calls per answer** (another visible guardrail — if hit, the step says so). Stream the final answer into the Chainlit message. Model from `WANDER_MODEL` in `.env`, defaulting to `claude-sonnet-5-5`; the Chainlit settings panel lets the reader switch model.
 
 ### Small UX touches
-- A **mode toggle** in Chainlit's chat settings: "Both" (default), "Graph only", "Records only" — useful once readers have seen the comparison and just want to explore the graph.
 - The ontology unlock works in chat: "In finance we track when each customer renews" → the Graph agent calls `propose_change`, the step shows what was added and how much data loaded, and the viewer (section 7) updates.
 - **Starter buttons, one per scenario**, read from `scenarios.json` (Charlene's question first). Adding a scenario adds a button automatically.
 
@@ -364,7 +364,7 @@ One hand-written Cypher query that a reader can paste into Neo4j Browser to see 
 
 ## 13. README
 
-Written for a reader arriving from the Medium article: what this is (two short paragraphs, linking the article — placeholder link for now), prerequisites, 10-minute setup (`docker compose up -d`, `uv sync`, `cp .env.example .env` and add an Anthropic API key, `python -m wander.cli load`, `chainlit run app.py`), the **no-API-key route** via the optional MCP servers (Claude Desktop config JSON and the Claude Code `claude mcp add` commands for both), and a **demo script**: Charlene's question in the chat app (Records then Graph), opening the wander step, the CLI raw-context view, the guardrails before-and-after, and the ontology unlock with the viewer open alongside. Include a note on fairness (same model and prompt on both sides; the records store hides nothing). British spelling.
+Written for a reader arriving from the Medium article: what this is (two short paragraphs, linking the article — placeholder link for now), prerequisites, 10-minute setup (`docker compose up -d`, `uv sync`, `cp .env.example .env` and add an Anthropic API key, `python -m wander.cli load`, `chainlit run app.py`), the **no-API-key route** via the optional MCP servers (Claude Desktop config JSON and the Claude Code `claude mcp add` commands for both), and a **demo script**: Charlene's question asked in the Records mode, then again in the Graph mode, opening the wander step, the CLI raw-context view, the guardrails before-and-after, and the ontology unlock with the viewer open alongside. Include a note on fairness (same model and prompt on both sides; the records store hides nothing). British spelling.
 
 ## 14. Out of scope
 
@@ -396,7 +396,7 @@ No auth or user accounts, no agent framework (plain SDK loop), no LLM calls outs
 - `wander --churned-since 2026-07-01` returns the **Integrations queue** as the top convergence node; prunes **General support** (low lift), the **features** (low support) and **MANAGES/account managers** (low support), each with a stated reason; the explanation includes the Support reorg decision, the reorg plan and **Daniela's comment**; "other members" includes the 12 at-risk customers with their open tickets.
 - The records store and the graph are loaded from the same generated JSON: the same 67 customers, ticket counts and documents are visible through both toolsets.
 - The records toolset's `list_records` returns Charlene's five churned customers with their five different churn reasons; nothing in its tools or descriptions points at the Integrations queue.
-- In the chat app, both agents use the same model and system prompt (asserted in a test), keep separate histories, and every tool call appears as a readable Chainlit step.
+- In the chat app, the Records and Graph modes use the same model and system prompt (asserted in a test), switching mode starts a new chat, and every tool call appears as a readable Chainlit step.
 - The agent loop stops at 8 tool calls per answer and says so.
 - The optional MCP servers expose exactly the same tools as the chat app's agents (both import from `tools.py`).
 - `base-rate "Integrations" --since 2026-03-15` returns 5/17 (29%) vs 2/50 (4%), worded as a signal, not proof.
