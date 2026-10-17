@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ontology viewer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
+<style>
+  :root {
+    --bg: #f7f6f2; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6a64; --line: #d9d6cc;
+    --node: #ffffff; --node-border: #2f4b6e; --edge: #8a8779; --accent: #c2410c; --accent-soft: #fde7da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #a09e95; --line: #34332f;
+      --node: #23231f; --node-border: #8fb3de; --edge: #8a877d; --accent: #fb923c; --accent-soft: #3a2316;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #a09e95; --line: #34332f;
+    --node: #23231f; --node-border: #8fb3de; --edge: #8a877d; --accent: #fb923c; --accent-soft: #3a2316;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 18px 24px 10px; display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .live { margin-left: auto; font-size: 13px; color: var(--muted); }
+  .live::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+                  background: #16a34a; margin-right: 6px; vertical-align: 1px; }
+  .live.off::before { background: #b91c1c; }
+  main { display: grid; grid-template-columns: 1fr 320px; gap: 16px; padding: 0 24px 24px;
+         height: calc(100vh - 64px); min-height: 480px; }
+  #graph { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; min-height: 420px; }
+  aside { display: flex; flex-direction: column; gap: 16px; overflow: auto; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+             margin: 0 0 8px; font-weight: 600; }
+  .card h3 { font-size: 17px; margin: 0 0 4px; }
+  .card p { margin: 0 0 10px; }
+  dl { margin: 0; font-size: 14px; }
+  dt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; margin-top: 8px; }
+  dd { margin: 2px 0 0; color: var(--muted); }
+  ol { margin: 0; padding-left: 18px; font-size: 13.5px; }
+  li { margin-bottom: 6px; }
+  li .who { color: var(--muted); }
+  li.new { color: var(--accent); }
+  .hint { color: var(--muted); font-size: 14px; }
+  .add-btn { font: inherit; font-size: 14px; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+             border: 1px solid var(--node-border); background: var(--node-border); color: var(--panel);
+             cursor: pointer; }
+  .add-btn[aria-expanded="true"] { background: transparent; color: var(--ink); }
+  .review-link { font-size: 14px; color: var(--node-border); font-weight: 600; }
+  .review-link .count { display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 4px; border-radius: 999px;
+                        background: var(--accent); color: #fff; font-size: 12px; text-align: center; }
+  .legend { display: flex; gap: 14px; font-size: 12.5px; color: var(--muted); margin: 0 0 6px; }
+  .legend span::before { content: ""; display: inline-block; width: 14px; height: 10px; border-radius: 3px;
+                         margin-right: 5px; vertical-align: -1px; border: 2px solid var(--node-border); }
+  .legend[hidden], .card[hidden] { display: none; }
+  .legend .proposed::before { border-style: dashed; border-color: var(--accent); }
+  .add-btn:focus-visible, .seg button:focus-visible, .teach input:focus-visible,
+  .teach select:focus-visible, .teach textarea:focus-visible, .teach .submit:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 2px; }
+  .teach[hidden] { display: none; }
+  .teach .lead { font-size: 14px; color: var(--muted); }
+  .seg { display: flex; gap: 2px; padding: 3px; border-radius: 9px; background: var(--bg);
+         border: 1px solid var(--line); margin-bottom: 12px; }
+  .seg button { flex: 1; font: inherit; font-size: 13px; padding: 6px 4px; border: 0; border-radius: 7px;
+                background: transparent; color: var(--muted); cursor: pointer; }
+  .seg button[aria-checked="true"] { background: var(--panel); color: var(--ink); font-weight: 600;
+                                     box-shadow: 0 0 0 1px var(--line); }
+  .teach label { display: block; font-size: 13px; font-weight: 600; margin: 10px 0 4px; }
+  .teach label .opt { font-weight: 400; color: var(--muted); }
+  .teach input, .teach select, .teach textarea {
+    width: 100%; font: inherit; font-size: 14px; padding: 7px 9px; border-radius: 7px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  .teach textarea { resize: vertical; min-height: 60px; }
+  .teach .row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 6px; align-items: end; }
+  .teach .row .arrow { padding-bottom: 8px; color: var(--muted); }
+  .teach .saved-as { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--muted);
+                     margin-top: 3px; min-height: 1em; }
+  .teach .submit { margin-top: 14px; width: 100%; font: inherit; font-weight: 600; padding: 9px;
+                   border-radius: 8px; border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+  .teach .submit:disabled { opacity: .55; cursor: default; }
+  .result { margin-top: 10px; font-size: 13.5px; padding: 8px 10px; border-radius: 7px; }
+  .result:empty { display: none; }
+  .result.ok { background: #dcfce7; color: #14532d; }
+  .result.note { background: #fef3c7; color: #713f12; }
+  .result.err { background: #fee2e2; color: #7f1d1d; }
+  @media (max-width: 760px) {
+    header { padding: 14px 16px 8px; }
+    main { grid-template-columns: 1fr; height: auto; padding: 0 16px 16px; }
+    #graph { height: 60vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>What the software knows about the business</h1>
+  <span class="sub" id="counts"></span>
+  <span class="live" id="live">live from ontology.yaml</span>
+  <a class="review-link" id="review-link" href="/review">Review proposals</a>
+  <button type="button" class="add-btn" id="add-btn" aria-expanded="false" aria-controls="teach">+ Add knowledge</button>
+</header>
+<main>
+  <div style="display:flex;flex-direction:column;min-height:0">
+    <div class="legend" id="legend" hidden><span>In use</span><span class="proposed">Proposed, waiting for review</span></div>
+    <div id="graph" role="img" aria-label="The ontology: entity types and the relationships between them" style="flex:1"></div>
+  </div>
+  <aside>
+    <form class="card teach" id="teach" hidden novalidate>
+      <h2>Teach it something new</h2>
+      <p class="lead">Tell the software about something the business knows, so it can wander there too.
+        A developer reviews each proposal before the software starts using it.</p>
+      <div class="seg" role="radiogroup" aria-label="What are you adding?">
+        <button type="button" role="radio" data-kind="relationship" aria-checked="true">A connection</button>
+        <button type="button" role="radio" data-kind="property" aria-checked="false">A detail</button>
+        <button type="button" role="radio" data-kind="entity" aria-checked="false">A kind of thing</button>
+      </div>
+
+      <div data-for="relationship">
+        <p class="hint">How one kind of thing relates to another. Tip: click boxes in the picture to fill these in.</p>
+        <div class="row">
+          <div><label for="rel-from">From</label><select id="rel-from"></select></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div><label for="rel-to">To</label><select id="rel-to"></select></div>
+        </div>
+        <label for="rel-name">The connection</label>
+        <input id="rel-name" placeholder="e.g. referred by" autocomplete="off">
+        <div class="saved-as" data-preview="rel-name"></div>
+      </div>
+
+      <div data-for="property" hidden>
+        <p class="hint">Something more you know about a kind of thing (or about a connection).</p>
+        <label for="prop-on">About</label><select id="prop-on"></select>
+        <label for="prop-name">The detail</label>
+        <input id="prop-name" placeholder="e.g. renewal date" autocomplete="off">
+        <div class="saved-as" data-preview="prop-name"></div>
+      </div>
+
+      <div data-for="entity" hidden>
+        <p class="hint">A kind of thing the software doesn't know about yet. Connect it to the rest afterwards.</p>
+        <label for="ent-name">Name</label>
+        <input id="ent-name" placeholder="e.g. partner" autocomplete="off">
+        <div class="saved-as" data-preview="ent-name"></div>
+        <label for="ent-props">Details it has <span class="opt">(optional, one per line: name: what it means)</span></label>
+        <textarea id="ent-props" placeholder="notes: What we've agreed with them"></textarea>
+      </div>
+
+      <label for="t-desc">What it means</label>
+      <textarea id="t-desc" placeholder="One plain sentence, e.g. The partner that referred this customer to us."></textarea>
+      <label for="t-by">Your name</label>
+      <input id="t-by" autocomplete="name" placeholder="So the change log says who taught it">
+      <button type="submit" class="submit">Propose it</button>
+      <div class="result" id="t-result" role="status" aria-live="polite"></div>
+    </form>
+    <div class="card" id="detail">
+      <h2>Details</h2>
+      <p class="hint">Click a box or an arrow to see what it means.</p>
+    </div>
+    <div class="card" id="pending-card" hidden>
+      <h2>Proposed, waiting for review</h2>
+      <ol id="pending"></ol>
+    </div>
+    <div class="card">
+      <h2>Changes</h2>
+      <ol id="log"></ol>
+    </div>
+  </aside>
+</main>
+<script>
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+let cy = null, last = "", known = new Set(), current = null;
+
+function style() {
+  return [
+    { selector: "node", style: {
+        "shape": "round-rectangle", "label": "data(id)", "background-color": css("--node"),
+        "border-color": css("--node-border"), "border-width": 2, "color": css("--ink"),
+        "font-size": 15, "font-weight": 600, "text-valign": "center", "text-halign": "center",
+        "width": "label", "height": 40, "padding": "14px", "font-family": "system-ui, sans-serif" } },
+    { selector: "edge", style: {
+        "label": "data(label)", "curve-style": "bezier", "control-point-step-size": 60,
+        "target-arrow-shape": "triangle", "line-color": css("--edge"), "target-arrow-color": css("--edge"),
+        "width": 1.6, "font-size": 11.5, "color": css("--muted"), "text-background-color": css("--panel"),
+        "text-background-opacity": 1, "text-background-padding": "3px", "text-rotation": "autorotate",
+        "font-family": "ui-monospace, Menlo, monospace" } },
+    { selector: ".new", style: {
+        "border-color": css("--accent"), "line-color": css("--accent"), "target-arrow-color": css("--accent"),
+        "background-color": css("--accent-soft"), "color": css("--ink"), "border-width": 3, "width": 3 } },
+    { selector: "node.new", style: { "width": "label" } },
+    { selector: ".proposed", style: {
+        "border-style": "dashed", "line-style": "dashed", "border-color": css("--accent"),
+        "line-color": css("--accent"), "target-arrow-color": css("--accent"), "color": css("--muted") } },
+    { selector: ":selected", style: { "border-width": 3, "overlay-opacity": 0.08 } },
+  ];
+}
+
+function elements(onto) {
+  const els = [], nodes = new Set(Object.keys(onto.entities));
+  for (const name of nodes) els.push({ group: "nodes", data: { id: name } });
+  for (const [name, r] of Object.entries(onto.relationships))
+    els.push({ group: "edges", data: { id: "rel:" + name, source: r.from, target: r.to, label: name } });
+  // Proposals, drawn dashed until a developer applies them.
+  for (const p of onto.proposals || []) {
+    if (p.kind === "entity" && !nodes.has(p.name)) {
+      nodes.add(p.name);
+      els.push({ group: "nodes", data: { id: p.name, proposal: p.id }, classes: "proposed" });
+    }
+  }
+  for (const p of onto.proposals || []) {
+    if (p.kind === "relationship" && nodes.has(p.from) && nodes.has(p.to))
+      els.push({ group: "edges", data: { id: "prop:" + p.id, source: p.from, target: p.to, label: p.name + " (proposed)",
+                                         proposal: p.id }, classes: "proposed" });
+  }
+  return els;
+}
+
+function showDetail(kind, name, onto) {
+  const box = document.getElementById("detail");
+  let spec = kind === "entity" ? onto.entities[name] : onto.relationships[name];
+  let proposal = null;
+  if (!spec) {
+    proposal = (onto.proposals || []).find(p => p.kind === kind && p.name === name);
+    if (!proposal) return;
+    spec = proposal;
+  }
+  const props = Object.entries(spec.properties || {});
+  const head = kind === "entity" ? name : `${spec.from} → ${name} → ${spec.to}`;
+  box.innerHTML = `<h2>${kind === "entity" ? "Kind of thing" : "Relationship"}${proposal ? " · proposed" : ""}</h2>
+    <h3></h3><p></p>${props.length ? "<dl></dl>" : '<p class="hint">No properties.</p>'}
+    ${proposal ? '<p class="hint" id="prop-note"></p>' : ""}`;
+  if (proposal) box.querySelector("#prop-note").textContent =
+    `Proposed by ${proposal.proposed_by} on ${proposal.proposed_at} (${proposal.id}). Waiting for a developer to review it.`;
+  box.querySelector("h3").textContent = head;
+  box.querySelector("p").textContent = spec.description || "";
+  const dl = box.querySelector("dl");
+  for (const [p, d] of props) {
+    const dt = document.createElement("dt"); dt.textContent = p;
+    const dd = document.createElement("dd"); dd.textContent = d;
+    dl.append(dt, dd);
+  }
+  current = { kind, name };
+}
+
+function draw(onto) {
+  const fresh = new Set();
+  const ids = [...Object.keys(onto.entities), ...Object.keys(onto.relationships).map(n => "rel:" + n),
+               ...(onto.proposals || []).map(p => p.kind === "entity" ? p.name : "prop:" + p.id)];
+  if (known.size) ids.forEach(id => { if (!known.has(id)) fresh.add(id); });
+  known = new Set(ids);
+
+  // Show or hide the legend before laying out, so the graph measures its box where it really is.
+  document.getElementById("legend").hidden = !(onto.proposals || []).length;
+
+  if (!cy) {
+    new ResizeObserver(() => { if (cy) { cy.resize(); cy.fit(undefined, 30); } })
+      .observe(document.getElementById("graph"));
+    cy = cytoscape({ container: document.getElementById("graph"), style: style(),
+                     wheelSensitivity: 0.2, minZoom: 0.3, maxZoom: 2.5 });
+    cy.on("tap", "node", e => { showDetail("entity", e.target.id(), window.onto); pickForConnection(e.target.id()); });
+    cy.on("tap", "edge", e => showDetail("relationship", e.target.data("label").replace(" (proposed)", ""), window.onto));
+  }
+  cy.elements().remove();
+  cy.add(elements(onto));
+  fresh.forEach(id => cy.getElementById(id).addClass("new"));
+  const root = onto.entities.Customer ? "#Customer" : undefined;
+  cy.resize();
+  cy.layout({ name: "breadthfirst", directed: false, roots: root, spacingFactor: 1.2, fit: true,
+              padding: 30, animate: fresh.size > 0, animationDuration: 400 }).run();
+  if (fresh.size) setTimeout(() => cy.elements().removeClass("new"), 8000);
+
+  const nE = Object.keys(onto.entities).length, nR = Object.keys(onto.relationships).length;
+  document.getElementById("counts").textContent = `${nE} kinds of thing · ${nR} relationships`;
+  const pending = onto.proposals || [];
+  document.getElementById("pending-card").hidden = !pending.length;
+  const link = document.getElementById("review-link");
+  link.textContent = "Review proposals";
+  if (pending.length) { const c = document.createElement("span"); c.className = "count"; c.textContent = pending.length; link.append(c); }
+  const plist = document.getElementById("pending");
+  plist.innerHTML = "";
+  pending.slice().reverse().forEach(p => {
+    const li = document.createElement("li");
+    li.textContent = p.summary + " ";
+    const who = document.createElement("span"); who.className = "who";
+    who.textContent = `— ${p.proposed_by}, ${p.proposed_at}`;
+    li.append(who);
+    plist.append(li);
+  });
+
+  const log = document.getElementById("log");
+  log.innerHTML = "";
+  (onto.changelog || []).slice().reverse().forEach((c, i) => {
+    const li = document.createElement("li");
+    if (i === 0 && fresh.size) li.className = "new";
+    li.textContent = c.change + " ";
+    const who = document.createElement("span"); who.className = "who";
+    who.textContent = `— ${c.by}, ${c.date}`;
+    li.append(who);
+    log.append(li);
+  });
+  if (current) showDetail(current.kind, current.name, onto);
+  fillChoices(onto);
+}
+
+async function poll() {
+  const live = document.getElementById("live");
+  try {
+    const res = await fetch("/ontology.json", { cache: "no-store" });
+    const text = await res.text();
+    live.classList.remove("off");
+    if (text !== last) {
+      last = text;
+      const onto = JSON.parse(text);
+      if (onto.error) { live.textContent = "ontology.yaml has an error"; live.classList.add("off"); return; }
+      live.textContent = "live from ontology.yaml";
+      window.onto = onto;
+      draw(onto);
+    }
+  } catch (e) {
+    live.textContent = "viewer server not reachable";
+    live.classList.add("off");
+  }
+}
+
+// ---- "Add knowledge" ------------------------------------------------------------------
+
+const $ = id => document.getElementById(id);
+const words = t => (t || "").trim().replace(/[^A-Za-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean);
+const NAMERS = {
+  entity: t => words(t).map(w => w[0].toUpperCase() + w.slice(1)).join(""),
+  relationship: t => words(t).join("_").toUpperCase(),
+  property: t => words(t).join("_").toLowerCase(),
+};
+let kind = "relationship";
+
+function store(k, v) { try { v === undefined ? (v = localStorage.getItem(k)) : localStorage.setItem(k, v); } catch (e) {} return v; }
+
+function setKind(k) {
+  kind = k;
+  document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-checked", String(b.dataset.kind === k)));
+  document.querySelectorAll("#teach [data-for]").forEach(d => { d.hidden = d.dataset.for !== k; });
+  $("t-result").textContent = "";
+}
+
+function fillChoices(onto) {
+  const opts = (sel, names) => {
+    const keep = sel.value;
+    sel.innerHTML = "";
+    names.forEach(n => { const o = document.createElement("option"); o.value = o.textContent = n; sel.append(o); });
+    if (names.includes(keep)) sel.value = keep;
+  };
+  const ents = [...Object.keys(onto.entities),
+                ...(onto.proposals || []).filter(p => p.kind === "entity" && !onto.entities[p.name]).map(p => p.name)];
+  opts($("rel-from"), ents);
+  opts($("rel-to"), ents);
+  opts($("prop-on"), [...ents, ...Object.keys(onto.relationships)]);
+}
+
+let nextEnd = "from";
+function pickForConnection(entity) {
+  if ($("teach").hidden || kind !== "relationship") return;
+  $(nextEnd === "from" ? "rel-from" : "rel-to").value = entity;
+  nextEnd = nextEnd === "from" ? "to" : "from";
+}
+
+function preview() {
+  const map = { "rel-name": "relationship", "prop-name": "property", "ent-name": "entity" };
+  document.querySelectorAll("[data-preview]").forEach(el => {
+    const name = NAMERS[map[el.dataset.preview]]($(el.dataset.preview).value);
+    el.textContent = name ? `saved as ${name}` : "";
+  });
+}
+
+function buildChange() {
+  const change = { kind, description: $("t-desc").value.trim(), proposed_by: $("t-by").value.trim() };
+  if (kind === "relationship") {
+    Object.assign(change, { name: NAMERS.relationship($("rel-name").value), from: $("rel-from").value, to: $("rel-to").value });
+  } else if (kind === "property") {
+    Object.assign(change, { name: NAMERS.property($("prop-name").value), entity: $("prop-on").value });
+  } else {
+    const props = {};
+    $("ent-props").value.split("\n").forEach(line => {
+      const [n, ...rest] = line.split(":");
+      const key = NAMERS.property(n);
+      if (key) props[key] = rest.join(":").trim() || "No description yet.";
+    });
+    Object.assign(change, { name: NAMERS.entity($("ent-name").value), properties: props });
+  }
+  return change;
+}
+
+async function submit(e) {
+  e.preventDefault();
+  const out = $("t-result"), btn = document.querySelector("#teach .submit");
+  const change = buildChange();
+  if (!change.name) { out.className = "result err"; out.textContent = "Give it a name."; return; }
+  if (!change.proposed_by) { out.className = "result err"; out.textContent = "Add your name, for the change log."; $("t-by").focus(); return; }
+  store("wander.by", change.proposed_by);
+  btn.disabled = true; out.className = "result"; out.textContent = "Proposing…";
+  try {
+    const res = await fetch("/propose", { method: "POST", headers: { "Content-Type": "application/json" },
+                                          body: JSON.stringify(change) });
+    const body = await res.json();
+    if (!res.ok) { out.className = "result err"; out.textContent = body.error || "That didn't work."; return; }
+    out.className = body.would_load ? "result ok" : "result note";
+    out.textContent = body.message;
+    ["rel-name", "prop-name", "ent-name", "ent-props", "t-desc"].forEach(id => { $(id).value = ""; });
+    preview();
+    poll();
+  } catch (err) {
+    out.className = "result err"; out.textContent = "Couldn't reach the viewer server.";
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+$("add-btn").addEventListener("click", () => {
+  const open = $("teach").hidden;
+  $("teach").hidden = !open;
+  $("add-btn").setAttribute("aria-expanded", String(open));
+  if (open) { $("t-by").value = $("t-by").value || store("wander.by") || ""; $("rel-name").focus(); }
+});
+document.querySelectorAll(".seg button").forEach((b, i, all) => {
+  b.addEventListener("click", () => setKind(b.dataset.kind));
+  b.addEventListener("keydown", e => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!step) return;
+    const next = all[(i + step + all.length) % all.length];
+    next.focus(); setKind(next.dataset.kind);
+  });
+});
+["rel-name", "prop-name", "ent-name"].forEach(id => $(id).addEventListener("input", preview));
+$("teach").addEventListener("submit", submit);
+
+poll();
+setInterval(poll, 2000);
+window.addEventListener("resize", () => { if (cy) { cy.resize(); cy.fit(undefined, 30); } });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => cy && cy.style(style()));
+</script>
+</body>
+</html>

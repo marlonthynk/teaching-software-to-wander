@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review proposals</title>
+<style>
+  :root {
+    --bg: #f7f6f2; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6a64; --line: #d9d6cc;
+    --navy: #2f4b6e; --accent: #c2410c;
+    --ok-bg: #dcfce7; --ok-ink: #14532d; --note-bg: #fef3c7; --note-ink: #713f12;
+    --err-bg: #fee2e2; --err-ink: #7f1d1d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #a09e95; --line: #34332f;
+      --navy: #8fb3de; --accent: #fb923c;
+      --ok-bg: #12321f; --ok-ink: #bbf7d0; --note-bg: #3a2c0d; --note-ink: #fde68a;
+      --err-bg: #3b1515; --err-ink: #fecaca;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #a09e95; --line: #34332f;
+    --navy: #8fb3de; --accent: #fb923c;
+    --ok-bg: #12321f; --ok-ink: #bbf7d0; --note-bg: #3a2c0d; --note-ink: #fde68a;
+    --err-bg: #3b1515; --err-ink: #fecaca;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 22px 24px 48px; }
+  header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
+  h1 { font-size: 22px; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+  header a { margin-left: auto; color: var(--navy); font-size: 14px; }
+  .intro { color: var(--muted); margin: 6px 0 20px; max-width: 640px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+          margin-bottom: 18px; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+             margin: 0 0 12px; font-weight: 600; }
+  .empty { color: var(--muted); margin: 4px 0; }
+  .item { display: grid; grid-template-columns: 26px 1fr auto; gap: 4px 12px; padding: 14px 0;
+          border-top: 1px solid var(--line); }
+  .item:first-of-type { border-top: 0; padding-top: 4px; }
+  .item input[type=checkbox] { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--navy); }
+  .kind { display: inline-block; font-size: 11.5px; font-weight: 600; text-transform: uppercase;
+          letter-spacing: .05em; color: var(--muted); margin-bottom: 2px; }
+  .head { font-weight: 650; font-size: 16px; }
+  .head code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14.5px; }
+  .desc { margin: 2px 0 6px; }
+  .meta { font-size: 13px; color: var(--muted); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .chip { font-size: 12.5px; padding: 3px 9px; border-radius: 999px; }
+  .chip.ok { background: var(--ok-bg); color: var(--ok-ink); }
+  .chip.note { background: var(--note-bg); color: var(--note-ink); }
+  .chip.err { background: var(--err-bg); color: var(--err-ink); }
+  .reject { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--line);
+            border-radius: 8px; padding: 5px 10px; cursor: pointer; align-self: start; }
+  .reject:hover { color: var(--ink); }
+  .reject-form { grid-column: 2 / 4; display: flex; gap: 8px; margin-top: 8px; }
+  .reject-form[hidden] { display: none; }
+  input[type=text] { font: inherit; font-size: 14px; padding: 7px 10px; border-radius: 8px;
+                     border: 1px solid var(--line); background: var(--bg); color: var(--ink); flex: 1; min-width: 0; }
+  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 14px;
+         padding-top: 14px; border-top: 1px solid var(--line); }
+  .bar[hidden] { display: none; }
+  .bar label { font-size: 13px; font-weight: 600; }
+  .bar input[type=text] { max-width: 220px; }
+  .apply { margin-left: auto; font: inherit; font-weight: 600; padding: 9px 16px; border-radius: 9px; border: 0;
+           background: var(--accent); color: #fff; cursor: pointer; }
+  .apply:disabled { opacity: .5; cursor: default; }
+  .small-btn { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 8px; border: 0;
+               background: var(--ink); color: var(--panel); cursor: pointer; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .result { margin-top: 12px; padding: 9px 12px; border-radius: 8px; font-size: 14px; }
+  .result:empty { display: none; }
+  .result.ok { background: var(--ok-bg); color: var(--ok-ink); }
+  .result.err { background: var(--err-bg); color: var(--err-ink); }
+  ol.log { margin: 0; padding-left: 18px; font-size: 14px; }
+  ol.log li { margin-bottom: 8px; }
+  ol.log .who { color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) {
+    .wrap { padding: 16px 16px 40px; }
+    .item { grid-template-columns: 24px 1fr; }
+    .reject { grid-column: 2; justify-self: start; }
+    .reject-form { grid-column: 1 / 3; }
+    .apply { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Review proposed changes</h1>
+    <a href="/">← Back to the ontology</a>
+  </header>
+  <p class="intro">People across the business propose what the software should know about from the
+    ontology viewer. Nothing changes until a developer applies a proposal here. Applying updates the live
+    ontology, logs who proposed and who reviewed each change, and reloads the graph once.</p>
+
+  <section class="card" aria-labelledby="pending-h">
+    <h2 id="pending-h">Waiting for review</h2>
+    <div id="pending"></div>
+    <div class="bar" id="bar" hidden>
+      <label for="by">Reviewed by</label>
+      <input type="text" id="by" autocomplete="name" placeholder="Your name">
+      <button type="button" class="apply" id="apply">Apply selected</button>
+    </div>
+    <div class="result" id="result" role="status" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="applied-h">
+    <h2 id="applied-h">Recently applied</h2>
+    <ol class="log" id="applied"></ol>
+  </section>
+
+  <section class="card" aria-labelledby="rejected-h">
+    <h2 id="rejected-h">Rejected</h2>
+    <ol class="log" id="rejected"></ol>
+  </section>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const KIND = { entity: "Kind of thing", relationship: "Connection", property: "Detail" };
+let state = { pending: [] }, selected = new Set(), touched = false, lastJson = "";
+
+function store(k, v) { try { v === undefined ? (v = localStorage.getItem(k)) : localStorage.setItem(k, v); } catch (e) {} return v; }
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+function headline(p) {
+  const h = el("div", "head");
+  const code = t => { const c = el("code"); c.textContent = t; return c; };
+  if (p.kind === "relationship") h.append(code(p.from), " → ", code(p.name), " → ", code(p.to));
+  else if (p.kind === "property") h.append(code(`${p.entity}.${p.name}`));
+  else h.append(code(p.name));
+  return h;
+}
+
+// A proposal that builds on another pending one (e.g. a connection to a proposed kind of thing).
+function needs(p) {
+  const proposedEntities = Object.fromEntries(state.pending.filter(q => q.kind === "entity").map(q => [q.name, q.id]));
+  const ends = p.kind === "relationship" ? [p.from, p.to] : p.kind === "property" ? [p.entity] : [];
+  return [...new Set(ends.filter(e => proposedEntities[e]).map(e => proposedEntities[e]))].filter(id => id !== p.id);
+}
+
+function render() {
+  const box = $("pending");
+  box.innerHTML = "";
+  if (!state.pending.length) {
+    box.append(el("p", "empty", "Nothing waiting for review. People add knowledge from the ontology viewer."));
+    $("bar").hidden = true;
+  } else {
+    $("bar").hidden = false;
+    if (!touched) selected = new Set(state.pending.filter(p => p.valid).map(p => p.id));
+    for (const p of state.pending) {
+      const row = el("div", "item");
+      const cb = el("input"); cb.type = "checkbox"; cb.id = "cb-" + p.id; cb.checked = selected.has(p.id);
+      cb.disabled = !p.valid;
+      cb.setAttribute("aria-label", `Approve ${p.id}: ${p.summary}`);
+      cb.addEventListener("change", () => { touched = true; cb.checked ? selected.add(p.id) : selected.delete(p.id); render(); });
+      const body = el("div");
+      body.append(el("span", "kind", KIND[p.kind]), headline(p), el("p", "desc", p.description || ""),
+                  el("div", "meta", `Proposed by ${p.proposed_by} on ${p.proposed_at} · ${p.id}`));
+      const chips = el("div", "chips");
+      if (!p.valid) chips.append(el("span", "chip err", p.problem));
+      else if (p.would_load) chips.append(el("span", "chip ok", `Would load ${p.would_load} ${p.unit}`));
+      else chips.append(el("span", "chip note", "No data for this yet: someone would need to supply it"));
+      const missing = needs(p).filter(id => !selected.has(id));
+      if (p.valid && selected.has(p.id) && missing.length)
+        chips.append(el("span", "chip err", `Needs ${missing.join(", ")} too`));
+      body.append(chips);
+      const rej = el("button", "reject", "Reject"); rej.type = "button";
+      const form = el("div", "reject-form"); form.hidden = true;
+      const reason = el("input"); reason.type = "text"; reason.placeholder = "Why? (shown to whoever proposed it)";
+      reason.setAttribute("aria-label", `Reason for rejecting ${p.id}`);
+      const go = el("button", "small-btn", "Reject it"); go.type = "button";
+      rej.addEventListener("click", () => { form.hidden = !form.hidden; if (!form.hidden) reason.focus(); });
+      go.addEventListener("click", () => act("/reject", { id: p.id, reviewed_by: $("by").value.trim(), reason: reason.value.trim() }));
+      form.append(reason, go);
+      row.append(cb, body, rej, form);
+      box.append(row);
+    }
+  }
+  const n = state.pending.filter(p => selected.has(p.id)).length;
+  $("apply").textContent = n ? `Apply ${n} selected change${n === 1 ? "" : "s"}` : "Apply selected";
+  $("apply").disabled = !n;
+
+  const applied = $("applied"); applied.innerHTML = "";
+  if (!(state.recently_applied || []).length) applied.append(el("p", "empty", "Nothing applied through review yet."));
+  for (const c of state.recently_applied || []) {
+    const li = el("li", null, c.change + " ");
+    li.append(el("span", "who", `— proposed by ${c.by}, reviewed by ${c.reviewed_by}, ${c.date}`));
+    applied.append(li);
+  }
+  const rejected = $("rejected"); rejected.innerHTML = "";
+  if (!(state.rejected || []).length) rejected.append(el("p", "empty", "Nothing rejected."));
+  for (const r of state.rejected || []) {
+    const li = el("li", null, `${r.summary} `);
+    li.append(el("span", "who", `— proposed by ${r.proposed_by}; rejected by ${r.rejected_by}, ${r.rejected_at}: “${r.reason}”`));
+    rejected.append(li);
+  }
+}
+
+async function act(path, body) {
+  const out = $("result");
+  if (!body.reviewed_by) { out.className = "result err"; out.textContent = "Add your name under “Reviewed by” first."; $("by").focus(); return; }
+  store("wander.reviewer", body.reviewed_by);
+  out.className = "result"; out.textContent = "Working…";
+  try {
+    const res = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { out.className = "result err"; out.textContent = data.error || "That didn't work."; return; }
+    out.className = "result ok";
+    out.textContent = data.message + (data.applied ? " " + data.applied.map(a => `${a.id}: ${a.loaded} ${a.unit} loaded.`).join(" ") : "");
+    touched = false;
+    await load(true);
+  } catch (e) {
+    out.className = "result err"; out.textContent = "Couldn't reach the viewer server.";
+  }
+}
+
+async function load(force) {
+  try {
+    const res = await fetch("/proposals.json", { cache: "no-store" });
+    const text = await res.text();
+    if (!force && text === lastJson) return;
+    lastJson = text;
+    state = JSON.parse(text);
+    const ids = new Set(state.pending.map(p => p.id));
+    selected = new Set([...selected].filter(id => ids.has(id)));
+    render();
+  } catch (e) { /* keep the last view; the next poll will retry */ }
+}
+
+$("by").value = store("wander.reviewer") || "";
+$("apply").addEventListener("click", () =>
+  act("/apply", { ids: state.pending.filter(p => selected.has(p.id)).map(p => p.id), reviewed_by: $("by").value.trim() }));
+load(true);
+setInterval(load, 3000);
+</script>
+</body>
+</html>

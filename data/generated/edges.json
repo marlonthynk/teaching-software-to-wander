@@ -1,0 +1,6122 @@
+[
+ {
+  "type": "ABOUT",
+  "from": "tkt_0001",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0002",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0003",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0004",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0005",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0006",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0007",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0008",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0009",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0010",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0011",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0012",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0013",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0014",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0015",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0016",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0017",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0018",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0019",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0020",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0021",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0022",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0023",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0024",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0025",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0026",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0027",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0028",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0029",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0030",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0031",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0032",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0033",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0034",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0035",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0036",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0037",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0038",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0039",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0040",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0041",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0042",
+  "to": "feat_advanced_reporting",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0046",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0047",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0048",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0049",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0055",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0057",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0058",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0060",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0076",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0086",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0088",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0097",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0100",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0104",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0105",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0106",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0109",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0111",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0112",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0120",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0123",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0126",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0135",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0139",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0140",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0143",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0144",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0148",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0149",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0151",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0159",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0160",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0164",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0166",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0167",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0171",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0172",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0173",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0174",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0177",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0179",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0180",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0182",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0183",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0184",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0186",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0192",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0193",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0199",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0203",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0205",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0208",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0223",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0227",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0234",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0237",
+  "to": "feat_webhooks",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0238",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0242",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0246",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0247",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0248",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0249",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0252",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0258",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0259",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0265",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0267",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0270",
+  "to": "feat_api_rate_limits",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0272",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0280",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0283",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0291",
+  "to": "feat_dashboards",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0294",
+  "to": "feat_data_sync",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0295",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0297",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0301",
+  "to": "feat_csv_import",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0304",
+  "to": "feat_sso",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0313",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "ABOUT",
+  "from": "tkt_0318",
+  "to": "feat_mobile_app",
+  "properties": {}
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_charlene",
+  "to": "doc_pricing_memo",
+  "properties": {
+   "date": "2026-01-09",
+   "text": "Can we keep the old price for customers mid-trial?"
+  }
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_charlene",
+  "to": "doc_roadmap",
+  "properties": {
+   "date": "2025-12-15",
+   "text": "Advanced reporting is the most requested feature this year."
+  }
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_daniela",
+  "to": "doc_reorg_plan",
+  "properties": {
+   "date": "2026-03-04",
+   "text": "Before we retire the Integrations queue: the routing rule still sends integration tickets there. We need to update it, or they'll go nowhere."
+  }
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_dominus",
+  "to": "doc_sla_policy",
+  "properties": {
+   "date": "2026-05-18",
+   "text": "Good. I'll add SLA breaches to the weekly CS review."
+  }
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_mike",
+  "to": "doc_pricing_memo",
+  "properties": {
+   "date": "2026-01-08",
+   "text": "Fine by finance. Let's keep an eye on Starter churn."
+  }
+ },
+ {
+  "type": "COMMENTED_ON",
+  "from": "person_rosa",
+  "to": "doc_reorg_plan",
+  "properties": {
+   "date": "2026-03-03",
+   "text": "Agreed. Platform support picks up integration work from 15 March."
+  }
+ },
+ {
+  "type": "DOCUMENTED_IN",
+  "from": "dec_pricing_update",
+  "to": "doc_pricing_memo",
+  "properties": {}
+ },
+ {
+  "type": "DOCUMENTED_IN",
+  "from": "dec_sla_policy",
+  "to": "doc_sla_policy",
+  "properties": {}
+ },
+ {
+  "type": "DOCUMENTED_IN",
+  "from": "dec_support_reorg",
+  "to": "doc_reorg_plan",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0051",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0056",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0060",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0062",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0066",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0070",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0071",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0075",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0076",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0079",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0086",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0094",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0098",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0105",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0111",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0122",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0123",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0127",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0134",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0139",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0145",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0148",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0163",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0167",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0174",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0178",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0200",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0201",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0207",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0219",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0228",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0231",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0233",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0243",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0250",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0263",
+  "to": "person_dominus",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0270",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0274",
+  "to": "person_lukas",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0289",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0294",
+  "to": "person_sofia",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0299",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0309",
+  "to": "person_kwame",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0315",
+  "to": "person_rosa",
+  "properties": {}
+ },
+ {
+  "type": "ESCALATED_TO",
+  "from": "tkt_0324",
+  "to": "person_priya",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_002",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_004",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_012",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_014",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_022",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_023",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_029",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_037",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_040",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_047",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_051",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_054",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_059",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_060",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_063",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_065",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_andrew",
+  "to": "cust_066",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_003",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_005",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_006",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_015",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_024",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_025",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_030",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_032",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_033",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_034",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_042",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_043",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_049",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_053",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_055",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_056",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_061",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_062",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_064",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_anshit",
+  "to": "cust_067",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_001",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_007",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_008",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_009",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_010",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_011",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_013",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_016",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_017",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_018",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_019",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_020",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_021",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_026",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_027",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_028",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_031",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_035",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_036",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_038",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_039",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_041",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_044",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_045",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_046",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_048",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_050",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_052",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_057",
+  "properties": {}
+ },
+ {
+  "type": "MANAGES",
+  "from": "person_jenny",
+  "to": "cust_058",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_001",
+  "to": "tkt_0001",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_001",
+  "to": "tkt_0050",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_001",
+  "to": "tkt_0051",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_001",
+  "to": "tkt_0052",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_002",
+  "to": "tkt_0023",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_002",
+  "to": "tkt_0053",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_002",
+  "to": "tkt_0054",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_002",
+  "to": "tkt_0055",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_003",
+  "to": "tkt_0024",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_003",
+  "to": "tkt_0056",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_003",
+  "to": "tkt_0057",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_003",
+  "to": "tkt_0058",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_004",
+  "to": "tkt_0059",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_004",
+  "to": "tkt_0060",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_004",
+  "to": "tkt_0061",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_004",
+  "to": "tkt_0062",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_005",
+  "to": "tkt_0063",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_005",
+  "to": "tkt_0064",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_005",
+  "to": "tkt_0065",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_006",
+  "to": "tkt_0066",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_006",
+  "to": "tkt_0067",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_006",
+  "to": "tkt_0068",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_006",
+  "to": "tkt_0069",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_007",
+  "to": "tkt_0033",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_007",
+  "to": "tkt_0070",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_007",
+  "to": "tkt_0071",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_007",
+  "to": "tkt_0072",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_007",
+  "to": "tkt_0073",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0006",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0007",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0074",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0075",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0076",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0077",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_008",
+  "to": "tkt_0078",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0039",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0079",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0080",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0081",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0082",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_009",
+  "to": "tkt_0083",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0025",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0084",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0085",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0086",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0087",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_010",
+  "to": "tkt_0088",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_011",
+  "to": "tkt_0043",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_011",
+  "to": "tkt_0089",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_011",
+  "to": "tkt_0090",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_011",
+  "to": "tkt_0091",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_011",
+  "to": "tkt_0092",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_012",
+  "to": "tkt_0093",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_012",
+  "to": "tkt_0094",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_012",
+  "to": "tkt_0095",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_012",
+  "to": "tkt_0096",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0008",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0009",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0097",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0098",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0099",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0100",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_013",
+  "to": "tkt_0101",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0040",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0102",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0103",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0104",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0105",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_014",
+  "to": "tkt_0106",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0026",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0107",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0108",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0109",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0110",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_015",
+  "to": "tkt_0111",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_016",
+  "to": "tkt_0112",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_016",
+  "to": "tkt_0113",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_016",
+  "to": "tkt_0114",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_016",
+  "to": "tkt_0115",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_016",
+  "to": "tkt_0116",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_017",
+  "to": "tkt_0044",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_017",
+  "to": "tkt_0117",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_017",
+  "to": "tkt_0118",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_017",
+  "to": "tkt_0119",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_017",
+  "to": "tkt_0120",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_018",
+  "to": "tkt_0121",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_018",
+  "to": "tkt_0122",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_018",
+  "to": "tkt_0123",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_018",
+  "to": "tkt_0124",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_018",
+  "to": "tkt_0125",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_019",
+  "to": "tkt_0126",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_019",
+  "to": "tkt_0127",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_019",
+  "to": "tkt_0128",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_020",
+  "to": "tkt_0129",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_020",
+  "to": "tkt_0130",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_020",
+  "to": "tkt_0131",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_020",
+  "to": "tkt_0132",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_020",
+  "to": "tkt_0133",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0002",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0134",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0135",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0136",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0137",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_021",
+  "to": "tkt_0138",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_022",
+  "to": "tkt_0010",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_022",
+  "to": "tkt_0139",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_022",
+  "to": "tkt_0140",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_022",
+  "to": "tkt_0141",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_023",
+  "to": "tkt_0041",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_023",
+  "to": "tkt_0142",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_023",
+  "to": "tkt_0143",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_023",
+  "to": "tkt_0144",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0042",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0145",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0146",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0147",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0148",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_024",
+  "to": "tkt_0149",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_025",
+  "to": "tkt_0045",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_025",
+  "to": "tkt_0150",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_025",
+  "to": "tkt_0151",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_025",
+  "to": "tkt_0152",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_025",
+  "to": "tkt_0153",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_026",
+  "to": "tkt_0154",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_026",
+  "to": "tkt_0155",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_026",
+  "to": "tkt_0156",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_026",
+  "to": "tkt_0157",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_026",
+  "to": "tkt_0158",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_027",
+  "to": "tkt_0046",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_027",
+  "to": "tkt_0159",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_027",
+  "to": "tkt_0160",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_027",
+  "to": "tkt_0161",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_027",
+  "to": "tkt_0162",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_028",
+  "to": "tkt_0027",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_028",
+  "to": "tkt_0163",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_028",
+  "to": "tkt_0164",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_028",
+  "to": "tkt_0165",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_029",
+  "to": "tkt_0166",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_029",
+  "to": "tkt_0167",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_029",
+  "to": "tkt_0168",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_029",
+  "to": "tkt_0169",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_029",
+  "to": "tkt_0170",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_030",
+  "to": "tkt_0171",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_030",
+  "to": "tkt_0172",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_030",
+  "to": "tkt_0173",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_030",
+  "to": "tkt_0174",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_030",
+  "to": "tkt_0175",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_031",
+  "to": "tkt_0028",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_031",
+  "to": "tkt_0176",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_031",
+  "to": "tkt_0177",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_031",
+  "to": "tkt_0178",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_032",
+  "to": "tkt_0179",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_032",
+  "to": "tkt_0180",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_032",
+  "to": "tkt_0181",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_033",
+  "to": "tkt_0182",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_033",
+  "to": "tkt_0183",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_033",
+  "to": "tkt_0184",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_033",
+  "to": "tkt_0185",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0003",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0186",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0187",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0188",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0189",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_034",
+  "to": "tkt_0190",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_035",
+  "to": "tkt_0034",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_035",
+  "to": "tkt_0191",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_035",
+  "to": "tkt_0192",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_035",
+  "to": "tkt_0193",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_035",
+  "to": "tkt_0194",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0011",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0195",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0196",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0197",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0198",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_036",
+  "to": "tkt_0199",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_037",
+  "to": "tkt_0200",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_037",
+  "to": "tkt_0201",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_037",
+  "to": "tkt_0202",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_037",
+  "to": "tkt_0203",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_037",
+  "to": "tkt_0204",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_038",
+  "to": "tkt_0205",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_038",
+  "to": "tkt_0206",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_038",
+  "to": "tkt_0207",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_038",
+  "to": "tkt_0208",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_038",
+  "to": "tkt_0209",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_039",
+  "to": "tkt_0047",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_039",
+  "to": "tkt_0210",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_039",
+  "to": "tkt_0211",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_039",
+  "to": "tkt_0212",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_040",
+  "to": "tkt_0213",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_040",
+  "to": "tkt_0214",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_040",
+  "to": "tkt_0215",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0029",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0216",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0217",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0218",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0219",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_041",
+  "to": "tkt_0220",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0012",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0013",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0221",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0222",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0223",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0224",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_042",
+  "to": "tkt_0225",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_043",
+  "to": "tkt_0226",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_043",
+  "to": "tkt_0227",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_043",
+  "to": "tkt_0228",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0014",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0229",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0230",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0231",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0232",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_044",
+  "to": "tkt_0233",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_045",
+  "to": "tkt_0030",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_045",
+  "to": "tkt_0234",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_045",
+  "to": "tkt_0235",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_045",
+  "to": "tkt_0236",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_045",
+  "to": "tkt_0237",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0031",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0238",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0239",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0240",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0241",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_046",
+  "to": "tkt_0242",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_047",
+  "to": "tkt_0243",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_047",
+  "to": "tkt_0244",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_047",
+  "to": "tkt_0245",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_048",
+  "to": "tkt_0048",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_048",
+  "to": "tkt_0246",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_048",
+  "to": "tkt_0247",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_048",
+  "to": "tkt_0248",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_049",
+  "to": "tkt_0249",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_049",
+  "to": "tkt_0250",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_049",
+  "to": "tkt_0251",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_049",
+  "to": "tkt_0252",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0032",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0253",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0254",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0255",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0256",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_050",
+  "to": "tkt_0257",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_051",
+  "to": "tkt_0049",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_051",
+  "to": "tkt_0258",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_051",
+  "to": "tkt_0259",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_051",
+  "to": "tkt_0260",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0015",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0016",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0261",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0262",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0263",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0264",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_052",
+  "to": "tkt_0265",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_053",
+  "to": "tkt_0035",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_053",
+  "to": "tkt_0266",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_053",
+  "to": "tkt_0267",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_053",
+  "to": "tkt_0268",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_053",
+  "to": "tkt_0269",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_054",
+  "to": "tkt_0270",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_054",
+  "to": "tkt_0271",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_054",
+  "to": "tkt_0272",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_054",
+  "to": "tkt_0273",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_054",
+  "to": "tkt_0274",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_055",
+  "to": "tkt_0036",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_055",
+  "to": "tkt_0275",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_055",
+  "to": "tkt_0276",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_055",
+  "to": "tkt_0277",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_055",
+  "to": "tkt_0278",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_056",
+  "to": "tkt_0004",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_056",
+  "to": "tkt_0279",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_056",
+  "to": "tkt_0280",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_056",
+  "to": "tkt_0281",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_056",
+  "to": "tkt_0282",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_057",
+  "to": "tkt_0283",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_057",
+  "to": "tkt_0284",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_057",
+  "to": "tkt_0285",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_057",
+  "to": "tkt_0286",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_058",
+  "to": "tkt_0017",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_058",
+  "to": "tkt_0287",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_058",
+  "to": "tkt_0288",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_058",
+  "to": "tkt_0289",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_059",
+  "to": "tkt_0005",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_059",
+  "to": "tkt_0290",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_059",
+  "to": "tkt_0291",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_059",
+  "to": "tkt_0292",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_060",
+  "to": "tkt_0293",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_060",
+  "to": "tkt_0294",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_060",
+  "to": "tkt_0295",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_060",
+  "to": "tkt_0296",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_060",
+  "to": "tkt_0297",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0018",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0298",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0299",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0300",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0301",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_061",
+  "to": "tkt_0302",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0019",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0020",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0303",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0304",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0305",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_062",
+  "to": "tkt_0306",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0037",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0307",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0308",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0309",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0310",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_063",
+  "to": "tkt_0311",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0021",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0312",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0313",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0314",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0315",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_064",
+  "to": "tkt_0316",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_065",
+  "to": "tkt_0317",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_065",
+  "to": "tkt_0318",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_065",
+  "to": "tkt_0319",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_066",
+  "to": "tkt_0038",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_066",
+  "to": "tkt_0320",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_066",
+  "to": "tkt_0321",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_066",
+  "to": "tkt_0322",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_066",
+  "to": "tkt_0323",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_067",
+  "to": "tkt_0022",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_067",
+  "to": "tkt_0324",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_067",
+  "to": "tkt_0325",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_067",
+  "to": "tkt_0326",
+  "properties": {}
+ },
+ {
+  "type": "RAISED",
+  "from": "cust_067",
+  "to": "tkt_0327",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_011",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_017",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_018",
+  "to": "partner_blue_harbour",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_019",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_020",
+  "to": "partner_blue_harbour",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_025",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_029",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_033",
+  "to": "partner_blue_harbour",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_049",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_054",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_060",
+  "to": "partner_blue_harbour",
+  "properties": {}
+ },
+ {
+  "type": "REFERRED_BY",
+  "from": "cust_065",
+  "to": "partner_northwind",
+  "properties": {}
+ },
+ {
+  "type": "RETIRED_BY",
+  "from": "queue_integrations",
+  "to": "dec_support_reorg",
+  "properties": {}
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0001",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-06-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0002",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0003",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-04-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0004",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-07-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0005",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-04-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0006",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-08-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0007",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-06-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0008",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-07-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0009",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0010",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-08-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0011",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-03-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0012",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-04-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0013",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-04-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0014",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-07-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0015",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0016",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0017",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-07-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0018",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-04-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0019",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0020",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-08-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0021",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-05-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0022",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-08-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0023",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-10-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0024",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-01-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0025",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-11-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0026",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-11-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0027",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-01-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0028",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-12-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0029",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-02-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0030",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-11-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0031",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2025-10-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0032",
+  "to": "queue_integrations",
+  "properties": {
+   "routed_at": "2026-02-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0033",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0034",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0035",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-27"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0036",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-01-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0037",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0038",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-27"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0039",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-27"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0040",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0041",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0042",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0043",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0044",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-07-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0045",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-27"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0046",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0047",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0048",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0049",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0050",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0051",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0052",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0053",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0054",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0055",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0056",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0057",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0058",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-07-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0059",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0060",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0061",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0062",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-09-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0063",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0064",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0065",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-03-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0066",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0067",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0068",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0069",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-04-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0070",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0071",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0072",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-01-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0073",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0074",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-09-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0075",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0076",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-01-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0077",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0078",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0079",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0080",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0081",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0082",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0083",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0084",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0085",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-08-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0086",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-08"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0087",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0088",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0089",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0090",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0091",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0092",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0093",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0094",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0095",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0096",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-01-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0097",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-08-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0098",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0099",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-04-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0100",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0101",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-07-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0102",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-08"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0103",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0104",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0105",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0106",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-27"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0107",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0108",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0109",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0110",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0111",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0112",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0113",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0114",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0115",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0116",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0117",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0118",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0119",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0120",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0121",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0122",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0123",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0124",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0125",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-10-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0126",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0127",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0128",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0129",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0130",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0131",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-04-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0132",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-09-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0133",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-07-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0134",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0135",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0136",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0137",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0138",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0139",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0140",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0141",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0142",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0143",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0144",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0145",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0146",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0147",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0148",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-08-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0149",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0150",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-07-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0151",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0152",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0153",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-08"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0154",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0155",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0156",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0157",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0158",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0159",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-12"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0160",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-07-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0161",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-03-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0162",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0163",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0164",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0165",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-07-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0166",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0167",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0168",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-08-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0169",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0170",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0171",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0172",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0173",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-06-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0174",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0175",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0176",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0177",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0178",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0179",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0180",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-06-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0181",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0182",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0183",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0184",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0185",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0186",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0187",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0188",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0189",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0190",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-10-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0191",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-09-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0192",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-06-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0193",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0194",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-08"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0195",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0196",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-03-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0197",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0198",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0199",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-06-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0200",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-09-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0201",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0202",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0203",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-10-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0204",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0205",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0206",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0207",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0208",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0209",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0210",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0211",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-08-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0212",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0213",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0214",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0215",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0216",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0217",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-01-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0218",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-01-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0219",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0220",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-09-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0221",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0222",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0223",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0224",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0225",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0226",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-02-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0227",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0228",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-01-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0229",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0230",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0231",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0232",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0233",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0234",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0235",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0236",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-10-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0237",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-01-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0238",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-09-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0239",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-05-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0240",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-12"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0241",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0242",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0243",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0244",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0245",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0246",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0247",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0248",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0249",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0250",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0251",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0252",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0253",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-05-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0254",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0255",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0256",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-10-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0257",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-06-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0258",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-06-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0259",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-09-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0260",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-03"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0261",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0262",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-06-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0263",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0264",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0265",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0266",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0267",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-09-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0268",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0269",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-06"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0270",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0271",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-05-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0272",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0273",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-12-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0274",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0275",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0276",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0277",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0278",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0279",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0280",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-09-02"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0281",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0282",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0283",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0284",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-19"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0285",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0286",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0287",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0288",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-31"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0289",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0290",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0291",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0292",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0293",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-07-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0294",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0295",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-11-09"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0296",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-09-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0297",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-10-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0298",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-04-04"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0299",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-05-12"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0300",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-10"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0301",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-01-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0302",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0303",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-03-29"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0304",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0305",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-08-05"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0306",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-30"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0307",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-07-24"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0308",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-26"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0309",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-03-15"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0310",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-05-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0311",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-02-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0312",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-11-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0313",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-07"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0314",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-11"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0315",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-05-25"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0316",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-10-22"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0317",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-03-14"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0318",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2025-12-17"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0319",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-10-01"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0320",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-05-13"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0321",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-21"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0322",
+  "to": "queue_platform",
+  "properties": {
+   "routed_at": "2026-04-28"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0323",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2026-08-20"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0324",
+  "to": "queue_billing",
+  "properties": {
+   "routed_at": "2025-11-18"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0325",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-02-23"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0326",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2025-12-16"
+  }
+ },
+ {
+  "type": "ROUTED_TO",
+  "from": "tkt_0327",
+  "to": "queue_general",
+  "properties": {
+   "routed_at": "2026-03-29"
+  }
+ }
+]

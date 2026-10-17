@@ -1,0 +1,4503 @@
+[
+ {
+  "id": "cust_001",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Price",
+   "churned_at": "2026-08-05",
+   "health_score": 40,
+   "name": "Redwood Foods",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_002",
+  "type": "Customer",
+  "properties": {
+   "health_score": 40,
+   "name": "Brightline Travel",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2026-12-13",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_003",
+  "type": "Customer",
+  "properties": {
+   "health_score": 78,
+   "name": "Apex Analytics",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-03-15",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_004",
+  "type": "Customer",
+  "properties": {
+   "health_score": 72,
+   "name": "Summit Systems",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-09-02",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_005",
+  "type": "Customer",
+  "properties": {
+   "health_score": 41,
+   "name": "Falcon Energy",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2026-12-12",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_006",
+  "type": "Customer",
+  "properties": {
+   "health_score": 84,
+   "name": "Evergreen Retail",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-09-03",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_007",
+  "type": "Customer",
+  "properties": {
+   "health_score": 76,
+   "name": "Ember Studios",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-05-27",
+   "renewal_date": "2027-06-25",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_008",
+  "type": "Customer",
+  "properties": {
+   "health_score": 64,
+   "name": "Cedar Freight",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2026-10-17",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_009",
+  "type": "Customer",
+  "properties": {
+   "health_score": 69,
+   "name": "Summit Retail",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-04-11",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_010",
+  "type": "Customer",
+  "properties": {
+   "health_score": 57,
+   "name": "Brightline Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-01-08",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_011",
+  "type": "Customer",
+  "properties": {
+   "health_score": 92,
+   "name": "Riverstone Media",
+   "payment_status": "overdue",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2027-03-31",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_012",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Acquired by a larger group",
+   "churned_at": "2026-02-11",
+   "health_score": 27,
+   "name": "Oakridge Foods",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_013",
+  "type": "Customer",
+  "properties": {
+   "health_score": 36,
+   "name": "Bluefin Energy",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-01-31",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_014",
+  "type": "Customer",
+  "properties": {
+   "health_score": 49,
+   "name": "Pinnacle Health",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2026-12-17",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_015",
+  "type": "Customer",
+  "properties": {
+   "health_score": 67,
+   "name": "Lumen Analytics",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2026-11-16",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_016",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Company closed down",
+   "churned_at": "2026-05-19",
+   "health_score": 21,
+   "name": "Apex Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_017",
+  "type": "Customer",
+  "properties": {
+   "health_score": 34,
+   "name": "Apex Foods",
+   "payment_status": "overdue",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-06-24",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_018",
+  "type": "Customer",
+  "properties": {
+   "health_score": 73,
+   "name": "Bluefin Freight",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-09-11",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_019",
+  "type": "Customer",
+  "properties": {
+   "health_score": 46,
+   "name": "Ember Foods",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-08-20",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_020",
+  "type": "Customer",
+  "properties": {
+   "health_score": 78,
+   "name": "Ember Freight",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-08-09",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_021",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Missing feature",
+   "churned_at": "2026-07-16",
+   "health_score": 24,
+   "name": "Nimbus Studios",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_022",
+  "type": "Customer",
+  "properties": {
+   "health_score": 57,
+   "name": "Pinnacle Energy",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2026-12-30",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_023",
+  "type": "Customer",
+  "properties": {
+   "health_score": 51,
+   "name": "Apex Logistics",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-01-08",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_024",
+  "type": "Customer",
+  "properties": {
+   "health_score": 35,
+   "name": "Oakridge Freight",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-05-20",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_025",
+  "type": "Customer",
+  "properties": {
+   "health_score": 76,
+   "name": "Delta Retail",
+   "payment_status": "overdue",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-05-06",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_026",
+  "type": "Customer",
+  "properties": {
+   "health_score": 60,
+   "name": "Silverline Studios",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-09-19",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_027",
+  "type": "Customer",
+  "properties": {
+   "health_score": 66,
+   "name": "Redwood Energy",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "refund_requested_at": "2026-08-18",
+   "renewal_date": "2027-05-23",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_028",
+  "type": "Customer",
+  "properties": {
+   "health_score": 59,
+   "name": "Saffron Freight",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-05-25",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_029",
+  "type": "Customer",
+  "properties": {
+   "health_score": 60,
+   "name": "Keystone Media",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-07-08",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_030",
+  "type": "Customer",
+  "properties": {
+   "health_score": 90,
+   "name": "Ember Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-03-15",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_031",
+  "type": "Customer",
+  "properties": {
+   "health_score": 77,
+   "name": "Maple Logistics",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2027-01-15",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_032",
+  "type": "Customer",
+  "properties": {
+   "health_score": 86,
+   "name": "Pinnacle Logistics",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-09-20",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_033",
+  "type": "Customer",
+  "properties": {
+   "health_score": 66,
+   "name": "Falcon Media",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-06-01",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_034",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Moved to competitor",
+   "churned_at": "2026-09-12",
+   "health_score": 39,
+   "name": "Vertex Studios",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_035",
+  "type": "Customer",
+  "properties": {
+   "health_score": 83,
+   "name": "Acme Foods",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-06-24",
+   "renewal_date": "2027-06-22",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_036",
+  "type": "Customer",
+  "properties": {
+   "health_score": 26,
+   "name": "Tidal Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2026-12-29",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_037",
+  "type": "Customer",
+  "properties": {
+   "health_score": 47,
+   "name": "Vertex Labs",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2027-01-18",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_038",
+  "type": "Customer",
+  "properties": {
+   "health_score": 36,
+   "name": "Cobalt Travel",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "downgrade",
+   "plan_changed_at": "2026-04-04",
+   "renewal_date": "2027-02-13",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_039",
+  "type": "Customer",
+  "properties": {
+   "health_score": 91,
+   "name": "Saffron Travel",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "refund_requested_at": "2026-08-11",
+   "renewal_date": "2027-09-01",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_040",
+  "type": "Customer",
+  "properties": {
+   "health_score": 43,
+   "name": "Helix Studios",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-04-16",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_041",
+  "type": "Customer",
+  "properties": {
+   "health_score": 45,
+   "name": "Cobalt Systems",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-06-29",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_042",
+  "type": "Customer",
+  "properties": {
+   "health_score": 54,
+   "name": "Ember Health",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-03-02",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_043",
+  "type": "Customer",
+  "properties": {
+   "health_score": 50,
+   "name": "Tidal Studios",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "downgrade",
+   "plan_changed_at": "2026-06-27",
+   "renewal_date": "2026-11-19",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_044",
+  "type": "Customer",
+  "properties": {
+   "health_score": 35,
+   "name": "Helix Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-02-24",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_045",
+  "type": "Customer",
+  "properties": {
+   "health_score": 95,
+   "name": "Juniper Health",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2027-05-26",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_046",
+  "type": "Customer",
+  "properties": {
+   "health_score": 85,
+   "name": "Brightline Logistics",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2026-12-22",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_047",
+  "type": "Customer",
+  "properties": {
+   "health_score": 58,
+   "name": "Iris Foods",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "downgrade",
+   "plan_changed_at": "2026-06-12",
+   "renewal_date": "2026-11-23",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_048",
+  "type": "Customer",
+  "properties": {
+   "health_score": 74,
+   "name": "Zephyr Logistics",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "refund_requested_at": "2026-08-04",
+   "renewal_date": "2027-05-26",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_049",
+  "type": "Customer",
+  "properties": {
+   "health_score": 83,
+   "name": "Helix Energy",
+   "payment_status": "overdue",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2026-10-21",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_050",
+  "type": "Customer",
+  "properties": {
+   "health_score": 80,
+   "name": "Pinnacle Travel",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2026-11-04",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_051",
+  "type": "Customer",
+  "properties": {
+   "health_score": 77,
+   "name": "Falcon Foods",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "refund_requested_at": "2026-08-05",
+   "renewal_date": "2027-06-22",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_052",
+  "type": "Customer",
+  "properties": {
+   "health_score": 28,
+   "name": "Vertex Retail",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-02-05",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_053",
+  "type": "Customer",
+  "properties": {
+   "health_score": 40,
+   "name": "Apex Media",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-05-09",
+   "renewal_date": "2027-04-23",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_054",
+  "type": "Customer",
+  "properties": {
+   "health_score": 58,
+   "name": "Summit Logistics",
+   "payment_status": "overdue",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-04-17",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_055",
+  "type": "Customer",
+  "properties": {
+   "health_score": 70,
+   "name": "Maple Systems",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-05-26",
+   "renewal_date": "2026-10-22",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_056",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Building in-house",
+   "churned_at": "2026-09-04",
+   "health_score": 21,
+   "name": "Northstar Media",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_057",
+  "type": "Customer",
+  "properties": {
+   "health_score": 72,
+   "name": "Cedar Foods",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "downgrade",
+   "plan_changed_at": "2026-05-11",
+   "renewal_date": "2027-09-05",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_058",
+  "type": "Customer",
+  "properties": {
+   "health_score": 48,
+   "name": "Juniper Logistics",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2026-12-21",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_059",
+  "type": "Customer",
+  "properties": {
+   "churn_reason": "Budget",
+   "churned_at": "2026-07-27",
+   "health_score": 23,
+   "name": "Bluefin Labs",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "status": "churned"
+  }
+ },
+ {
+  "id": "cust_060",
+  "type": "Customer",
+  "properties": {
+   "health_score": 66,
+   "name": "Oakridge Studios",
+   "payment_status": "overdue",
+   "plan": "Enterprise",
+   "plan_change": "none",
+   "renewal_date": "2026-10-27",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_061",
+  "type": "Customer",
+  "properties": {
+   "health_score": 47,
+   "name": "Fernway Studios",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-06-06",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_062",
+  "type": "Customer",
+  "properties": {
+   "health_score": 50,
+   "name": "Willow Labs",
+   "payment_status": "current",
+   "plan": "Starter",
+   "plan_change": "none",
+   "renewal_date": "2027-09-29",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_063",
+  "type": "Customer",
+  "properties": {
+   "health_score": 90,
+   "name": "Quarry Travel",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-04-15",
+   "renewal_date": "2026-12-18",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_064",
+  "type": "Customer",
+  "properties": {
+   "health_score": 51,
+   "name": "Quarry Labs",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-05-25",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_065",
+  "type": "Customer",
+  "properties": {
+   "health_score": 30,
+   "name": "Zephyr Travel",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-08-19",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_066",
+  "type": "Customer",
+  "properties": {
+   "health_score": 32,
+   "name": "Iris Retail",
+   "payment_status": "current",
+   "plan": "Enterprise",
+   "plan_change": "upgrade",
+   "plan_changed_at": "2026-04-15",
+   "renewal_date": "2026-11-17",
+   "status": "active"
+  }
+ },
+ {
+  "id": "cust_067",
+  "type": "Customer",
+  "properties": {
+   "health_score": 28,
+   "name": "Orbit Systems",
+   "payment_status": "current",
+   "plan": "Growth",
+   "plan_change": "none",
+   "renewal_date": "2027-02-16",
+   "status": "active"
+  }
+ },
+ {
+  "id": "dec_pricing_update",
+  "type": "Decision",
+  "properties": {
+   "date": "2026-01-10",
+   "summary": "Raise Growth and Enterprise list prices by 6% for new customers from February 2026.",
+   "title": "Pricing update"
+  }
+ },
+ {
+  "id": "dec_sla_policy",
+  "type": "Decision",
+  "properties": {
+   "date": "2026-05-20",
+   "summary": "Enterprise customers get a first response within 4 working hours; others within 1 working day.",
+   "title": "New SLA policy"
+  }
+ },
+ {
+  "id": "dec_support_reorg",
+  "type": "Decision",
+  "properties": {
+   "date": "2026-03-02",
+   "summary": "Merge the Integrations support team into Platform support and retire the Integrations queue on 15 March 2026.",
+   "title": "Support reorg"
+  }
+ },
+ {
+  "id": "doc_onboarding",
+  "type": "Document",
+  "properties": {
+   "text": "Week one: set up users and SSO. Week two: connect data sources with data sync or CSV import. Week three: build the first dashboards. Raise a ticket with support at any point.",
+   "title": "Customer onboarding guide",
+   "type": "guide"
+  }
+ },
+ {
+  "id": "doc_partner_programme",
+  "type": "Document",
+  "properties": {
+   "text": "We work with two referral partners, Northwind Consulting and Blue Harbour Advisory. Partners introduce customers and help them get started; we pay a referral fee for the first year.",
+   "title": "Partner programme overview",
+   "type": "overview"
+  }
+ },
+ {
+  "id": "doc_pricing_memo",
+  "type": "Document",
+  "properties": {
+   "text": "From 1 February 2026, Growth and Enterprise list prices rise by 6% for new customers. Existing customers keep their price until renewal. Starter is unchanged.",
+   "title": "Pricing update memo",
+   "type": "memo"
+  }
+ },
+ {
+  "id": "doc_reorg_plan",
+  "type": "Document",
+  "properties": {
+   "text": "Support reorg, effective 15 March 2026.\n\nWhy: the Integrations team is small and its volume has been falling, while Platform support is stretched. We'll merge the two.\n\nWhat changes: the Integrations queue is retired on 15 March. Integrations specialists join Platform support. General support and Billing are unchanged.\n\nOwner: Rosa (Head of Support).",
+   "title": "Reorg plan: support teams 2026",
+   "type": "plan"
+  }
+ },
+ {
+  "id": "doc_roadmap",
+  "type": "Document",
+  "properties": {
+   "text": "H1: Advanced reporting (custom reports, scheduled exports), released 1 April. Mobile app offline mode. H2: workspace permissions, a refreshed dashboard designer.",
+   "title": "Product roadmap 2026",
+   "type": "roadmap"
+  }
+ },
+ {
+  "id": "doc_sla_policy",
+  "type": "Document",
+  "properties": {
+   "text": "First response times: Enterprise within 4 working hours, Growth and Starter within one working day. Breaches are reported weekly to the Head of Customer Success.",
+   "title": "SLA policy v2",
+   "type": "policy"
+  }
+ },
+ {
+  "id": "feat_advanced_reporting",
+  "type": "Feature",
+  "properties": {
+   "area": "Analytics",
+   "name": "Advanced reporting",
+   "released_at": "2026-04-01"
+  }
+ },
+ {
+  "id": "feat_api_rate_limits",
+  "type": "Feature",
+  "properties": {
+   "area": "API",
+   "name": "API rate limits",
+   "released_at": "2023-09-12"
+  }
+ },
+ {
+  "id": "feat_csv_import",
+  "type": "Feature",
+  "properties": {
+   "area": "Data",
+   "name": "CSV import",
+   "released_at": "2022-11-03"
+  }
+ },
+ {
+  "id": "feat_dashboards",
+  "type": "Feature",
+  "properties": {
+   "area": "Analytics",
+   "name": "Dashboards",
+   "released_at": "2022-05-10"
+  }
+ },
+ {
+  "id": "feat_data_sync",
+  "type": "Feature",
+  "properties": {
+   "area": "Integrations",
+   "name": "Data sync",
+   "released_at": "2023-02-14"
+  }
+ },
+ {
+  "id": "feat_mobile_app",
+  "type": "Feature",
+  "properties": {
+   "area": "Apps",
+   "name": "Mobile app",
+   "released_at": "2024-07-08"
+  }
+ },
+ {
+  "id": "feat_sso",
+  "type": "Feature",
+  "properties": {
+   "area": "Security",
+   "name": "SSO",
+   "released_at": "2023-06-01"
+  }
+ },
+ {
+  "id": "feat_webhooks",
+  "type": "Feature",
+  "properties": {
+   "area": "API",
+   "name": "Webhooks",
+   "released_at": "2024-01-22"
+  }
+ },
+ {
+  "id": "partner_blue_harbour",
+  "type": "Partner",
+  "properties": {
+   "name": "Blue Harbour Advisory",
+   "notes": "Referral partner since 2024. Refers mid-sized retailers. No special terms.",
+   "owner": "Tom"
+  }
+ },
+ {
+  "id": "partner_northwind",
+  "type": "Partner",
+  "properties": {
+   "name": "Northwind Consulting",
+   "notes": "Referral partner since 2025. Promised the clients it refers quarterly invoicing as part of its consulting package. We bill monthly.",
+   "owner": "Tom"
+  }
+ },
+ {
+  "id": "person_andrew",
+  "type": "Person",
+  "properties": {
+   "name": "Andrew",
+   "role": "Account manager",
+   "team": "Customer Success"
+  }
+ },
+ {
+  "id": "person_anshit",
+  "type": "Person",
+  "properties": {
+   "name": "Anshit",
+   "role": "Account manager",
+   "team": "Customer Success"
+  }
+ },
+ {
+  "id": "person_ben",
+  "type": "Person",
+  "properties": {
+   "name": "Ben",
+   "role": "Finance analyst",
+   "team": "Finance"
+  }
+ },
+ {
+  "id": "person_charlene",
+  "type": "Person",
+  "properties": {
+   "name": "Charlene",
+   "role": "Product manager",
+   "team": "Product"
+  }
+ },
+ {
+  "id": "person_daniela",
+  "type": "Person",
+  "properties": {
+   "name": "Daniela",
+   "role": "Integrations support lead",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_dominus",
+  "type": "Person",
+  "properties": {
+   "name": "Dominus",
+   "role": "Head of Customer Success",
+   "team": "Customer Success"
+  }
+ },
+ {
+  "id": "person_hana",
+  "type": "Person",
+  "properties": {
+   "name": "Hana",
+   "role": "Engineering manager",
+   "team": "Engineering"
+  }
+ },
+ {
+  "id": "person_jenny",
+  "type": "Person",
+  "properties": {
+   "name": "Jenny",
+   "role": "Account manager",
+   "team": "Customer Success"
+  }
+ },
+ {
+  "id": "person_kwame",
+  "type": "Person",
+  "properties": {
+   "name": "Kwame",
+   "role": "Support agent",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_lukas",
+  "type": "Person",
+  "properties": {
+   "name": "Lukas",
+   "role": "Support agent",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_mike",
+  "type": "Person",
+  "properties": {
+   "name": "Mike",
+   "role": "CFO",
+   "team": "Finance"
+  }
+ },
+ {
+  "id": "person_priya",
+  "type": "Person",
+  "properties": {
+   "name": "Priya",
+   "role": "Support agent",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_rosa",
+  "type": "Person",
+  "properties": {
+   "name": "Rosa",
+   "role": "Head of Support",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_sofia",
+  "type": "Person",
+  "properties": {
+   "name": "Sofia",
+   "role": "Support agent",
+   "team": "Support"
+  }
+ },
+ {
+  "id": "person_tom",
+  "type": "Person",
+  "properties": {
+   "name": "Tom",
+   "role": "Head of Partnerships",
+   "team": "Partnerships"
+  }
+ },
+ {
+  "id": "queue_billing",
+  "type": "Queue",
+  "properties": {
+   "name": "Billing",
+   "status": "active"
+  }
+ },
+ {
+  "id": "queue_general",
+  "type": "Queue",
+  "properties": {
+   "name": "General support",
+   "status": "active"
+  }
+ },
+ {
+  "id": "queue_integrations",
+  "type": "Queue",
+  "properties": {
+   "name": "Integrations",
+   "retired_at": "2026-03-15",
+   "status": "retired"
+  }
+ },
+ {
+  "id": "queue_platform",
+  "type": "Queue",
+  "properties": {
+   "name": "Platform",
+   "status": "active"
+  }
+ },
+ {
+  "id": "tkt_0001",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-03",
+   "status": "open",
+   "title": "Setting up SSO with Okta",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0002",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-24",
+   "status": "open",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0003",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-24",
+   "status": "open",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0004",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-22",
+   "status": "open",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0005",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-25",
+   "status": "open",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0006",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-03",
+   "status": "open",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0007",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-28",
+   "status": "open",
+   "title": "SSO for contractor accounts",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0008",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-28",
+   "status": "open",
+   "title": "What are the API limits on our plan?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0009",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-20",
+   "status": "open",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0010",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-15",
+   "status": "open",
+   "title": "API returns 429 errors under normal load",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0011",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-19",
+   "status": "open",
+   "title": "CSV import fails on accented characters",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0012",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-04",
+   "status": "open",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0013",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-05",
+   "status": "open",
+   "title": "How often does data sync run?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0014",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-20",
+   "status": "open",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0015",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-19",
+   "status": "open",
+   "title": "Can we enforce SSO for everyone?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0016",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-05",
+   "status": "open",
+   "title": "How do we verify webhook signatures?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0017",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-04",
+   "status": "open",
+   "title": "How do we verify webhook signatures?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0018",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-02",
+   "status": "open",
+   "title": "Data sync stops halfway through",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0019",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-20",
+   "status": "open",
+   "title": "API returns 429 errors under normal load",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0020",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-02",
+   "status": "open",
+   "title": "SSO login loops back to the sign-in page",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0021",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-28",
+   "status": "open",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0022",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-05",
+   "status": "open",
+   "title": "Sync custom fields as well",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0023",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-29",
+   "status": "closed",
+   "title": "Data sync stops halfway through",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0024",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-18",
+   "status": "closed",
+   "title": "SSO login loops back to the sign-in page",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0025",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-29",
+   "status": "closed",
+   "title": "How do we verify webhook signatures?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0026",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-17",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0027",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-13",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0028",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-18",
+   "status": "closed",
+   "title": "What are the API limits on our plan?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0029",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-25",
+   "status": "closed",
+   "title": "Retry failed webhooks automatically",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0030",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-23",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0031",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-20",
+   "status": "closed",
+   "title": "API returns 429 errors under normal load",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0032",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-21",
+   "status": "closed",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0033",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-20",
+   "status": "closed",
+   "title": "Reporting API for our BI tool",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0034",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-05",
+   "status": "closed",
+   "title": "Reporting API for our BI tool",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0035",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-27",
+   "status": "closed",
+   "title": "Better reporting than the basic dashboards",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0036",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-03",
+   "status": "closed",
+   "title": "Reports with year-on-year comparison",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0037",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-28",
+   "status": "closed",
+   "title": "Reports across several workspaces",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0038",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-27",
+   "status": "closed",
+   "title": "Report builder for our finance team",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0039",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-27",
+   "status": "closed",
+   "title": "Drill down from a report into the records",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0040",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-31",
+   "status": "closed",
+   "title": "Export reports to Excel",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0041",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-05",
+   "status": "closed",
+   "title": "Pivot tables in reports",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0042",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-23",
+   "status": "closed",
+   "title": "Export reports to Excel",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0043",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-31",
+   "status": "closed",
+   "title": "Can we be invoiced quarterly instead?",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0044",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-14",
+   "status": "closed",
+   "title": "Can we be invoiced quarterly instead?",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0045",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-27",
+   "status": "closed",
+   "title": "Can we be invoiced quarterly instead?",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0046",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-18",
+   "status": "closed",
+   "title": "Refund for SSO seats we never used",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0047",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-11",
+   "status": "closed",
+   "title": "Refund request: mobile app unusable for a week",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0048",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-04",
+   "status": "closed",
+   "title": "Refund for dashboard downtime in July",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0049",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-05",
+   "status": "closed",
+   "title": "Refund for an import add-on we can't use",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0050",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-30",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0051",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-29",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0052",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-14",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0053",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-29",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0054",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-29",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0055",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-23",
+   "status": "closed",
+   "title": "What are the API limits on our plan?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0056",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-20",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0057",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-02",
+   "status": "closed",
+   "title": "API returns 429 errors under normal load",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0058",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-25",
+   "status": "closed",
+   "title": "Sync custom fields as well",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0059",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-10",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0060",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-16",
+   "status": "closed",
+   "title": "Sync custom fields as well",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0061",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-01",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0062",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-17",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0063",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-05",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0064",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-16",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0065",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-03",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0066",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-17",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0067",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-07",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0068",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-29",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0069",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-26",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0070",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-24",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0071",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-01",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0072",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-18",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0073",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-26",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0074",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-05",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0075",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-17",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0076",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-24",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0077",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-01",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0078",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-22",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0079",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-22",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0080",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-03",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0081",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-06",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0082",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-23",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0083",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-22",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0084",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-01",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0085",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-10",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0086",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-08",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0087",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-19",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0088",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-19",
+   "status": "closed",
+   "title": "Dashboard widgets load slowly",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0089",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-14",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0090",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-21",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0091",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-17",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0092",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-18",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0093",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-15",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0094",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-06",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0095",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-31",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0096",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-16",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0097",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-05",
+   "status": "closed",
+   "title": "What are the API limits on our plan?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0098",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-06",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0099",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-26",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0100",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-05",
+   "status": "closed",
+   "title": "Retry failed webhooks automatically",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0101",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-16",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0102",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-08",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0103",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-11",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0104",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-22",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0105",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-07",
+   "status": "closed",
+   "title": "Dark mode for dashboards",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0106",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-27",
+   "status": "closed",
+   "title": "Dashboard widgets load slowly",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0107",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-21",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0108",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-11",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0109",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-04",
+   "status": "closed",
+   "title": "Can we enforce SSO for everyone?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0110",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-24",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0111",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-28",
+   "status": "closed",
+   "title": "API returns 429 errors under normal load",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0112",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-07",
+   "status": "closed",
+   "title": "How do we verify webhook signatures?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0113",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-02",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0114",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-02",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0115",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-03",
+   "status": "closed",
+   "title": "Search results missing recent records",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0116",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-19",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0117",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-05",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0118",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-07",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0119",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-10",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0120",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-28",
+   "status": "open",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0121",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-05",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0122",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-15",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0123",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-20",
+   "status": "closed",
+   "title": "Retry failed webhooks automatically",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0124",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-09",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0125",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-15",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0126",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-31",
+   "status": "closed",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0127",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-19",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0128",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-06",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0129",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-01",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0130",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-30",
+   "status": "open",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0131",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-26",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0132",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-05",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0133",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-11",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0134",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-09",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0135",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-06",
+   "status": "closed",
+   "title": "SSO for contractor accounts",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0136",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-01",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0137",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-03",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0138",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-26",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0139",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-01",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0140",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-18",
+   "status": "closed",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0141",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-04",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0142",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-07",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0143",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-03",
+   "status": "closed",
+   "title": "How often does data sync run?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0144",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-02",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0145",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-19",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0146",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-16",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0147",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-05",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0148",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-02",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0149",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-19",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0150",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-19",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0151",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-20",
+   "status": "closed",
+   "title": "SSO for contractor accounts",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0152",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-04",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0153",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-08",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0154",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-29",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0155",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-22",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0156",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-06",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0157",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-17",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0158",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-06",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0159",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-12",
+   "status": "closed",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0160",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-19",
+   "status": "closed",
+   "title": "Retry failed webhooks automatically",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0161",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-05",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0162",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-14",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0163",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-03",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0164",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-06",
+   "status": "closed",
+   "title": "Dark mode for dashboards",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0165",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-28",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0166",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-21",
+   "status": "closed",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0167",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-15",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0168",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-22",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0169",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-28",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0170",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-22",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0171",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-24",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0172",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-11",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0173",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-21",
+   "status": "closed",
+   "title": "Offline mode in the mobile app",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0174",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-25",
+   "status": "closed",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0175",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-13",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0176",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-14",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0177",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-13",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0178",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-29",
+   "status": "open",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0179",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-28",
+   "status": "closed",
+   "title": "Mobile app logs us out every day",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0180",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-13",
+   "status": "closed",
+   "title": "Sharing a dashboard with a colleague",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0181",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-01",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0182",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-10",
+   "status": "closed",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0183",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-09",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0184",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-24",
+   "status": "closed",
+   "title": "Mobile app logs us out every day",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0185",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-22",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0186",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-03",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0187",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-26",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0188",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-22",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0189",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-20",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0190",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-23",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0191",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-05",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0192",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-11",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0193",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-21",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0194",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-08",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0195",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-19",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0196",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-23",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0197",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-29",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0198",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-01",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0199",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-07",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0200",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-16",
+   "status": "open",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0201",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-20",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0202",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-16",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0203",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-24",
+   "status": "closed",
+   "title": "What are the API limits on our plan?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0204",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-09",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0205",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-01",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0206",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-14",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0207",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-26",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0208",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-24",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0209",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-25",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0210",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-15",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0211",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-24",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0212",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-04",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0213",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-30",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0214",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-24",
+   "status": "open",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0215",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-05",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0216",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-26",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0217",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-26",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0218",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-21",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0219",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-06",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0220",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-03",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0221",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-19",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0222",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-14",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0223",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-16",
+   "status": "closed",
+   "title": "Webhooks not firing on record updates",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0224",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-11",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0225",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-29",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0226",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-09",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0227",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-23",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0228",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-24",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0229",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-06",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0230",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-02",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0231",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-10",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0232",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-25",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0233",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-13",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0234",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-09",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0235",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-24",
+   "status": "open",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0236",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-20",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0237",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-29",
+   "status": "closed",
+   "title": "How do we verify webhook signatures?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0238",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-22",
+   "status": "open",
+   "title": "Dark mode for dashboards",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0239",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-01",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0240",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-12",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0241",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-19",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0242",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-20",
+   "status": "closed",
+   "title": "Sharing a dashboard with a colleague",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0243",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-22",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0244",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-16",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0245",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-24",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0246",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-20",
+   "status": "closed",
+   "title": "CSV import fails on accented characters",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0247",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-05",
+   "status": "closed",
+   "title": "CSV import fails on accented characters",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0248",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-28",
+   "status": "closed",
+   "title": "CSV import fails on accented characters",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0249",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-14",
+   "status": "closed",
+   "title": "Mobile app logs us out every day",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0250",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-26",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0251",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-07",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0252",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-29",
+   "status": "closed",
+   "title": "Sync shows some records twice",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0253",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-04",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0254",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-02",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0255",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-31",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0256",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-23",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0257",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-24",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0258",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-03",
+   "status": "closed",
+   "title": "Sync custom fields as well",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0259",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-30",
+   "status": "closed",
+   "title": "How often does data sync run?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0260",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-03",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0261",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-30",
+   "status": "open",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0262",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-06-16",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0263",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-25",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0264",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-19",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0265",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-23",
+   "status": "closed",
+   "title": "Dashboard widgets load slowly",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0266",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-07",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0267",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-17",
+   "status": "open",
+   "title": "Mobile app logs us out every day",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0268",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-19",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0269",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-06",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0270",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-15",
+   "status": "closed",
+   "title": "Higher API limits for bulk jobs",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0271",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-05",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0272",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-04",
+   "status": "closed",
+   "title": "CSV import fails on accented characters",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0273",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-19",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0274",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-25",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0275",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-21",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0276",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-15",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0277",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-13",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0278",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-14",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0279",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-29",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0280",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-02",
+   "status": "closed",
+   "title": "Dashboard widgets load slowly",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0281",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-16",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0282",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-11",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0283",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-16",
+   "status": "closed",
+   "title": "Data sync stops halfway through",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0284",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-19",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0285",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-11",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0286",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-07",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0287",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-26",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0288",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-31",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0289",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-21",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0290",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-04",
+   "status": "closed",
+   "title": "Exporting the audit log",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0291",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-26",
+   "status": "closed",
+   "title": "Sharing a dashboard with a colleague",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0292",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-29",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0293",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-14",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0294",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-22",
+   "status": "closed",
+   "title": "Sync custom fields as well",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0295",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-09",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0296",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-09-29",
+   "status": "open",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0297",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-11",
+   "status": "closed",
+   "title": "Largest file a CSV import can take?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0298",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-04",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0299",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-12",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0300",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-10",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0301",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-01-22",
+   "status": "closed",
+   "title": "Map columns when importing a CSV",
+   "topic": "feature request"
+  }
+ },
+ {
+  "id": "tkt_0302",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-28",
+   "status": "closed",
+   "title": "Updating our card details",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0303",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-29",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0304",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-15",
+   "status": "closed",
+   "title": "SSO login loops back to the sign-in page",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0305",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-05",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0306",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-30",
+   "status": "closed",
+   "title": "Moving data between workspaces",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0307",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-07-24",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0308",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-26",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0309",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-15",
+   "status": "closed",
+   "title": "Error 500 when saving settings",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0310",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-14",
+   "status": "closed",
+   "title": "Where do we find the release notes?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0311",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-18",
+   "status": "closed",
+   "title": "Copy of last month's invoice, please",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0312",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-07",
+   "status": "closed",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0313",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-07",
+   "status": "closed",
+   "title": "Mobile app logs us out every day",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0314",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-11",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0315",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-25",
+   "status": "closed",
+   "title": "Adding a purchase order number to invoices",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0316",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-10-22",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0317",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-14",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0318",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-17",
+   "status": "closed",
+   "title": "Is there an Android version of the app?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0319",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-10-01",
+   "status": "open",
+   "title": "Adding a new user to our account",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0320",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-05-13",
+   "status": "closed",
+   "title": "Question about our renewal price",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0321",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-21",
+   "status": "closed",
+   "title": "Password reset email never arrived",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0322",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-04-28",
+   "status": "closed",
+   "title": "Workspace very slow this morning",
+   "topic": "bug"
+  }
+ },
+ {
+  "id": "tkt_0323",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-08-20",
+   "status": "closed",
+   "title": "Invoice shows the wrong company address",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0324",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-11-18",
+   "status": "closed",
+   "title": "VAT number missing from our invoice",
+   "topic": "billing"
+  }
+ },
+ {
+  "id": "tkt_0325",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-02-23",
+   "status": "closed",
+   "title": "Do you have a status page?",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0326",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2025-12-16",
+   "status": "closed",
+   "title": "Changing the account owner",
+   "topic": "question"
+  }
+ },
+ {
+  "id": "tkt_0327",
+  "type": "Ticket",
+  "properties": {
+   "created_at": "2026-03-29",
+   "status": "closed",
+   "title": "Training session for new staff",
+   "topic": "question"
+  }
+ }
+]

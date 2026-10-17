@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 96" width="640" height="96" role="img" aria-label="Teaching software to wander">
+  <g stroke-linecap="round">
+    <line x1="14" y1="62" x2="40" y2="22" stroke="#c9c6bb" stroke-width="3"/>
+    <line x1="40" y1="22" x2="84" y2="32" stroke="#c9c6bb" stroke-width="3"/>
+    <line x1="40" y1="22" x2="60" y2="74" stroke="#c9c6bb" stroke-width="3"/>
+    <line x1="14" y1="62" x2="60" y2="74" stroke="#c2410c" stroke-width="4"/>
+    <line x1="60" y1="74" x2="84" y2="32" stroke="#c2410c" stroke-width="4"/>
+  </g>
+  <circle cx="40" cy="22" r="7" fill="#ffffff" stroke="#c9c6bb" stroke-width="3"/>
+  <circle cx="60" cy="74" r="7" fill="#ffffff" stroke="#c2410c" stroke-width="3"/>
+  <circle cx="14" cy="62" r="8" fill="#2f4b6e"/>
+  <circle cx="84" cy="32" r="9" fill="#c2410c"/>
+  <text x="112" y="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="38" font-weight="650" letter-spacing="-0.5" fill="#1d1d1b">Teaching software to wander</text>
+  <text x="114" y="80" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="19" fill="#6b6a64">The same question, asked of records and of a graph</text>
+</svg>

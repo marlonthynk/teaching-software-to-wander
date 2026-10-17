@@ -1,0 +1,8 @@
+# The planted stories, in order. Each line is a module in this folder.
+# Order matters: scenarios claim customers from a shared pool in this order.
+scenarios:
+  - dead_queue          # 1. Why did these five customers leave?
+  - feature_that_sells  # 2. Why did these customers upgrade?
+  - no_common_thread    # 3. Why did these customers downgrade?
+  - hidden_until_taught # 4. Why are these customers paying late?
+  - coincidence         # 5. Why did these customers ask for refunds?

@@ -1,0 +1,215 @@
+[
+ {
+  "name": "dead-queue",
+  "title": "The dead queue",
+  "question": "Why did the five customers who churned in Q3 2026 leave?",
+  "anchors": {
+   "type": "Customer",
+   "where": {
+    "churned_at": {
+     "gte": "2026-07-01",
+     "lte": "2026-09-30"
+    }
+   }
+  },
+  "expected": {
+   "anchor_count": 5,
+   "convergence": {
+    "type": "Queue",
+    "name": "Integrations"
+   },
+   "lift_range": [
+    2.2,
+    2.8
+   ],
+   "explanation_includes": [
+    "Support reorg",
+    "Reorg plan: support teams 2026",
+    "Daniela"
+   ],
+   "other_members_include": [
+    "cust_008",
+    "cust_013",
+    "cust_022",
+    "cust_036",
+    "cust_042",
+    "cust_044",
+    "cust_052",
+    "cust_058",
+    "cust_061",
+    "cust_062",
+    "cust_064",
+    "cust_067"
+   ],
+   "pruned_include": [
+    {
+     "name": "General support",
+     "reason": "hub"
+    },
+    {
+     "type": "Feature",
+     "reason": "low support"
+    },
+    {
+     "type": "Person",
+     "reason": "low support"
+    }
+   ],
+   "base_rate": {
+    "node": "Integrations",
+    "since": "2026-03-15",
+    "outcome": "churned",
+    "with": [
+     5,
+     17
+    ],
+    "without": [
+     2,
+     50
+    ]
+   }
+  }
+ },
+ {
+  "name": "feature-that-sells",
+  "title": "The feature that sells",
+  "question": "Why did the customers who upgraded their plan in Q2 2026 upgrade?",
+  "anchors": {
+   "type": "Customer",
+   "where": {
+    "plan_change": "upgrade",
+    "plan_changed_at": {
+     "gte": "2026-04-01",
+     "lte": "2026-06-30"
+    }
+   }
+  },
+  "expected": {
+   "anchor_count": 6,
+   "convergence": {
+    "type": "Feature",
+    "name": "Advanced reporting"
+   },
+   "lift_range": [
+    5.0,
+    8.0
+   ],
+   "other_members_exact": [
+    "cust_009",
+    "cust_014",
+    "cust_023",
+    "cust_024"
+   ],
+   "pruned_include": [
+    {
+     "type": "Queue",
+     "reason": "hub"
+    }
+   ]
+  }
+ },
+ {
+  "name": "no-common-thread",
+  "title": "No common thread",
+  "question": "Why did the customers who downgraded their plan in Q2 2026 downgrade?",
+  "anchors": {
+   "type": "Customer",
+   "where": {
+    "plan_change": "downgrade",
+    "plan_changed_at": {
+     "gte": "2026-04-01",
+     "lte": "2026-06-30"
+    }
+   }
+  },
+  "expected": {
+   "anchor_count": 4,
+   "convergence": null,
+   "pruned_include": [
+    {
+     "type": "Queue",
+     "reason": "hub"
+    }
+   ]
+  }
+ },
+ {
+  "name": "hidden-until-taught",
+  "title": "Hidden until the business teaches it",
+  "question": "Why are our overdue customers paying late?",
+  "anchors": {
+   "type": "Customer",
+   "where": {
+    "payment_status": "overdue"
+   }
+  },
+  "expected": {
+   "anchor_count": 6,
+   "before_ontology": {
+    "convergence": null
+   },
+   "ontology_additions": [
+    {
+     "kind": "entity",
+     "name": "Partner",
+     "description": "A consulting firm that refers customers to us.",
+     "properties": {
+      "name": "The partner's name.",
+      "notes": "What we've agreed with them, and anything to know.",
+      "owner": "Who looks after the relationship."
+     },
+     "proposed_by": "Tom"
+    },
+    {
+     "kind": "relationship",
+     "name": "REFERRED_BY",
+     "from": "Customer",
+     "to": "Partner",
+     "description": "The partner that referred this customer to us.",
+     "proposed_by": "Tom"
+    }
+   ],
+   "convergence": {
+    "type": "Partner",
+    "name": "Northwind Consulting"
+   },
+   "lift_range": [
+    5.0,
+    9.0
+   ],
+   "other_members_exact": [
+    "cust_019",
+    "cust_029",
+    "cust_065"
+   ]
+  }
+ },
+ {
+  "name": "coincidence",
+  "title": "The coincidence",
+  "question": "Why did the customers who asked for refunds in August 2026 ask for them?",
+  "anchors": {
+   "type": "Customer",
+   "where": {
+    "refund_requested_at": {
+     "gte": "2026-08-01",
+     "lte": "2026-08-31"
+    }
+   }
+  },
+  "expected": {
+   "anchor_count": 4,
+   "convergence": null,
+   "pruned_include": [
+    {
+     "name": "Jenny",
+     "reason": "low lift",
+     "lift_range": [
+      1.5,
+      1.9
+     ]
+    }
+   ]
+  }
+ }
+]

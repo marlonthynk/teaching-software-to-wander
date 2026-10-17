@@ -1,0 +1,92 @@
+# The ontology: which kinds of things exist in the business, and how they relate.
+# The graph only loads what is declared here. Data that exists but isn't declared
+# stays invisible, until someone in the business teaches the software about it.
+
+entities:
+  Customer:
+    description: A company that pays us for the product.
+    properties:
+      name: The company's name.
+      status: Whether they are still a customer (active) or have left (churned).
+      plan: The plan they are on (Starter, Growth or Enterprise).
+      churn_reason: The reason recorded in the CRM when they left.
+      churned_at: The date they left.
+      plan_change: Their most recent plan change (upgrade, downgrade or none).
+      plan_changed_at: When that plan change happened.
+      payment_status: Whether their invoices are paid up (current) or late (overdue).
+      refund_requested_at: When they last asked for a refund, if ever.
+  Ticket:
+    description: A support request a customer raised.
+    properties:
+      title: The ticket's subject line.
+      topic: What kind of request it is (bug, question, feature request, billing).
+      status: Whether it is still open or has been closed.
+      created_at: When the customer raised it.
+  Queue:
+    description: A support team's inbox that tickets are routed to.
+    properties:
+      name: The queue's name.
+      status: Whether the queue is active or has been retired.
+      retired_at: When the queue was retired, if it was.
+  Feature:
+    description: A part of the product.
+    properties:
+      name: The feature's name.
+      area: Which part of the product it belongs to.
+      released_at: When it was released.
+  Decision:
+    description: A decision the company made that changed how it works.
+    properties:
+      title: A short name for the decision.
+      date: When it was made.
+      summary: What was decided.
+  Document:
+    description: A written document, such as a plan or a policy.
+    properties:
+      title: The document's title.
+      type: What kind of document it is.
+      text: The document's contents.
+  Person:
+    description: Someone who works at the company.
+    properties:
+      name: Their name.
+      role: Their job title.
+      team: The team they belong to.
+
+relationships:
+  RAISED:
+    from: Customer
+    to: Ticket
+    description: The customer opened this support ticket.
+  ROUTED_TO:
+    from: Ticket
+    to: Queue
+    description: Where the ticket was sent to be handled.
+    properties:
+      routed_at: When the ticket was routed there.
+  ABOUT:
+    from: Ticket
+    to: Feature
+    description: The part of the product the ticket is about.
+  RETIRED_BY:
+    from: Queue
+    to: Decision
+    description: The decision that retired this queue.
+  DOCUMENTED_IN:
+    from: Decision
+    to: Document
+    description: The document where the decision is written up.
+  COMMENTED_ON:
+    from: Person
+    to: Document
+    description: This person left a comment on the document.
+    properties:
+      text: What they wrote.
+      date: When they wrote it.
+  MANAGES:
+    from: Person
+    to: Customer
+    description: This person is the customer's account manager.
+
+changelog:
+  - {date: 2026-10-16, by: Marlon, change: Initial ontology}

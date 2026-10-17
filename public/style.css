@@ -1,0 +1,199 @@
+/* Teaching software to wander: Chainlit customisations. Colours come from Chainlit's own
+   theme variables (set in theme.json), so this works in light and dark mode. */
+
+/* Chainlit draws the welcome logo 200px wide; ours is a wordmark and needs more room. */
+img.logo {
+  width: min(520px, calc(100vw - 48px)) !important;
+  height: auto !important;
+  margin-bottom: 12px !important;
+}
+
+/* Our switch replaces the chat-profile dropdown once it's on screen. The dropdown stays in
+   the page (the switch drives it), just out of sight. */
+.wander-has-switch #chat-profiles {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+/* While the switch drives the dropdown, don't flash its menu. */
+.wander-switching [data-radix-popper-content-wrapper] {
+  opacity: 0 !important;
+}
+
+.wander-modes {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 20;
+}
+
+.wander-radios {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border-radius: 999px;
+  background: hsl(var(--muted) / 0.55);
+  border: 1px solid hsl(var(--border));
+}
+
+.wander-radio {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 6px 14px 6px 11px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.wander-radio:hover {
+  color: hsl(var(--foreground));
+}
+.wander-radio:focus-visible,
+.wander-info-btn:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+.wander-radio[aria-checked="true"] {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12), 0 0 0 1px hsl(var(--border));
+}
+
+.wander-dot {
+  display: inline-block;
+  flex: none;
+  align-self: center;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  opacity: 0.55;
+}
+.wander-radio[aria-checked="true"] .wander-dot {
+  background: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+  opacity: 1;
+}
+.wander-radio[data-mode="Graph"][aria-checked="true"] .wander-dot {
+  background: #ea580c;
+  border-color: #ea580c;
+}
+
+.wander-label {
+  font-weight: 600;
+}
+.wander-hint {
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+}
+
+.wander-info-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+}
+.wander-info-btn:hover,
+.wander-info-btn[aria-expanded="true"] {
+  color: hsl(var(--foreground));
+  background: hsl(var(--accent));
+}
+
+.wander-info {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.18);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.wander-info[hidden] {
+  display: none;
+}
+.wander-info p {
+  margin: 0 0 10px;
+}
+.wander-info dl {
+  margin: 0 0 10px;
+}
+.wander-info dt {
+  font-weight: 650;
+  margin-top: 8px;
+}
+.wander-info dd {
+  margin: 2px 0 0;
+  color: hsl(var(--muted-foreground));
+}
+.wander-info code {
+  font-size: 12.5px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: hsl(var(--muted));
+}
+.wander-info-note {
+  margin: 0 !important;
+  font-size: 13px;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Narrower screens: keep the switch, drop the hints (the info button explains). */
+@media (max-width: 900px) {
+  .wander-hint {
+    display: none;
+  }
+  .wander-radio {
+    padding: 6px 11px 6px 9px;
+  }
+}
+
+/* Phones: sit next to the new-chat button instead of centred, so it clears the right-hand links. */
+@media (max-width: 520px) {
+  .wander-modes {
+    left: 54px;
+    transform: translateY(-50%);
+    gap: 2px;
+  }
+  .wander-radio {
+    gap: 5px;
+    padding: 5px 9px 5px 8px;
+    font-size: 13px;
+  }
+  .wander-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .wander-info {
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    transform: none;
+    width: calc(100vw - 32px);
+  }
+}

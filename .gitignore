@@ -1,2 +1,19 @@
 SPEC.md
+Blog wander section explained.md
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Local config and build output
+.env
+data/records.db
+.chainlit/*
+!.chainlit/config.toml
+.files/
+
+# Local tooling
+.claude/
