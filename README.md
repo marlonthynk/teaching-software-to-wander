@@ -58,7 +58,7 @@ The app has three modes, picked with the **Compare | Records | Graph** switch at
 
 The two agents never see each other's answers: each keeps its own conversation, in Compare mode too, and a follow-up question goes to both. Switching mode starts a new chat. Each tool call shows up as a step you can open to see what the agent asked for and what came back (Records and Graph also show the raw JSON). Each answer ends with a footer: tool calls, tokens and time.
 
-There's a starter button for each scenario (below). Charlene's question is the first.
+There are two starter buttons, for the two scenarios where the graph gives Claude context the records can't: Charlene's question about the Q3 churners, and the Q2 upgraders. The other three scenarios (below) are there to check the graph doesn't find a pattern that isn't there; both agents answer them alike, so they aren't starters, but you can type them in.
 
 ## Demo script
 

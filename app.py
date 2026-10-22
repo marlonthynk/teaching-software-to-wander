@@ -33,6 +33,10 @@ MODES = {
     "Records": ("records", "An ordinary store: records and keyword search."),
     "Graph": ("graph", "The same data as a graph the agent can wander."),
 }
+# The starter buttons: only the scenarios where the graph gives Claude context the records
+# can't. The other scenarios check that the wander finds nothing when there's nothing to find
+# (or nothing until the graph is taught), so both agents answer them alike. They stay as tests.
+STARTERS = ["dead-queue", "feature-that-sells"]
 SIDES = [("records", "Records", "records + search"), ("graph", "Graph", "wander the graph")]
 STEP_TEXT_LIMIT = 4000  # each tool result shown in Compare is cut to this many characters
 UPDATE_EVERY = 0.3  # seconds between redraws of the Compare element while answers stream in
@@ -44,7 +48,9 @@ def _scenarios() -> list[dict]:
 
 
 def _starters() -> list[cl.Starter]:
-    return [cl.Starter(label=s["question"], message=s["question"]) for s in _scenarios()]
+    by_name = {s["name"]: s for s in _scenarios()}
+    return [cl.Starter(label=by_name[n]["question"], message=by_name[n]["question"])
+            for n in STARTERS if n in by_name]
 
 
 @cl.set_chat_profiles

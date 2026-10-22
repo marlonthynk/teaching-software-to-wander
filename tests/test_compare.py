@@ -1,6 +1,9 @@
 """Compare mode's "only in this answer" chips. No API key or Neo4j needed."""
 
+import json
 from pathlib import Path
+
+import pytest
 
 from wander.chat.compare import mentioned, names_of_things, only_in
 
@@ -30,3 +33,11 @@ def test_only_in_keeps_what_the_other_answer_does_not_name():
 def test_the_compare_element_is_where_chainlit_looks():
     assert (ROOT / "public" / "elements" / "Compare.jsx").exists()
     assert 'name="Compare"' in (ROOT / "app.py").read_text()
+
+
+@pytest.mark.filterwarnings("ignore::DeprecationWarning")  # from a library Chainlit loads
+def test_the_starters_are_real_scenarios():
+    import app
+
+    names = {s["name"] for s in json.loads((ROOT / "data" / "generated" / "scenarios.json").read_text())}
+    assert set(app.STARTERS) <= names and len(app._starters()) == len(app.STARTERS) == 2
