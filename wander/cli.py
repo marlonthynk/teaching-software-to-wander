@@ -11,7 +11,8 @@ from typing import Optional
 
 import typer
 
-from wander import core, proposals, tools
+from wander import guardrails, proposals, tools
+from wander.graph.wander import wander as run_wander
 from wander import ontology as onto_mod
 from wander.render import render
 
@@ -25,7 +26,6 @@ ontology_app = typer.Typer(help="View and change the ontology.", no_args_is_help
 app.add_typer(records_app, name="records")
 app.add_typer(ontology_app, name="ontology")
 
-StoreOpt = typer.Option("neo4j", "--store", help="neo4j, or memory to run without Docker.")
 FormatOpt = typer.Option("text", "--format", help="text (readable) or json (everything).")
 
 
@@ -38,8 +38,8 @@ def _out(tool: str, result: dict, fmt: str) -> None:
         raise typer.Exit(1)
 
 
-def _run(toolset: str, tool: str, args: dict, store: str, fmt: str = "text") -> dict:
-    result, _, _ = tools.run(toolset, tool, args, tools.Context(store))
+def _run(toolset: str, tool: str, args: dict, fmt: str = "text") -> dict:
+    result, _, _ = tools.run(toolset, tool, args, tools.Context())
     _out(tool, result, fmt)
     return result
 
@@ -49,22 +49,18 @@ def _scenarios() -> list[dict]:
 
 
 @app.command()
-def load(store: str = StoreOpt, regenerate: bool = typer.Option(False, help="Rebuild the JSON first.")):
-    """Generate the data (if needed), then load the records store and the graph."""
-    from data import load_records
+def load(regenerate: bool = typer.Option(False, help="Rebuild the JSON first.")):
+    """Generate the data (if needed), then load the records store (SQLite) and the graph (Neo4j)."""
+    from data import load_graph, load_records
 
     if regenerate or not (ROOT / "data" / "generated" / "nodes.json").exists():
         from data import generate
         generate.main()
     counts = load_records.load()
     typer.echo("Records: " + ", ".join(f"{v} {k}" for k, v in counts.items()))
-    if store == "neo4j":
-        from data import load_graph
-        c = load_graph.load()
-        typer.echo(f"Graph: {c['nodes']} nodes, {c['edges']} relationships loaded into Neo4j "
-                   "(only what the ontology declares).")
-    else:
-        typer.echo("Graph: using the in-memory store, nothing to load.")
+    c = load_graph.load()
+    typer.echo(f"Graph: {c['nodes']} nodes, {c['edges']} relationships loaded into Neo4j "
+               "(only what the ontology declares).")
 
 
 @app.command()
@@ -79,15 +75,14 @@ def wander(
     scenario: Optional[str] = typer.Option(None, help="Use a scenario's anchors (see `scenarios`)."),
     churned_since: Optional[str] = typer.Option(None, help="Customers who churned on or after this date."),
     anchors: Optional[str] = typer.Option(None, help="Comma-separated node ids."),
-    max_hops: int = typer.Option(5),
-    min_support: float = typer.Option(0.6),
-    min_lift: float = typer.Option(2.0),
+    max_hops: int = typer.Option(guardrails.MAX_HOPS),
+    min_support: float = typer.Option(guardrails.MIN_SUPPORT),
+    min_lift: float = typer.Option(guardrails.MIN_LIFT),
     prune: bool = typer.Option(True, "--prune/--no-prune"),
-    store: str = StoreOpt,
     format: str = FormatOpt,
 ):
     """Wander from some starting points and print what the graph hands Claude."""
-    ctx = tools.Context(store)
+    ctx = tools.Context()
     if anchors:
         ids = [a.strip() for a in anchors.split(",") if a.strip()]
     else:
@@ -108,8 +103,8 @@ def wander(
         ids = [n["id"] for n in found["nodes"]]
     # The CLI exposes the guardrail knobs; the tool Claude calls always uses the defaults.
     try:
-        result = core.wander(ctx.graph, ids, max_hops=max_hops, min_support=min_support,
-                             min_lift=min_lift, prune=prune)
+        result = run_wander(ctx.graph, ids, max_hops=max_hops, min_support=min_support,
+                            min_lift=min_lift, prune=prune)
     except ValueError as e:
         result = {"error": str(e)}
     _out("wander", result, format)
@@ -117,32 +112,30 @@ def wander(
 
 @app.command("base-rate")
 def base_rate(node: str, since: Optional[str] = typer.Option(None), outcome: str = typer.Option("churned"),
-              pattern: Optional[str] = typer.Option(None), store: str = StoreOpt, format: str = FormatOpt):
+              format: str = FormatOpt):
     """Compare an outcome's rate with and without a connection to NODE."""
-    _run("graph", "compare_base_rate", {"node": node, "since": since, "outcome": outcome, "pattern": pattern},
-         store, format)
+    _run("graph", "compare_base_rate", {"node": node, "since": since, "outcome": outcome}, format)
 
 
 @app.command()
-def details(node: str, store: str = StoreOpt, format: str = FormatOpt):
+def details(node: str, format: str = FormatOpt):
     """One node in full, with its immediate connections."""
-    _run("graph", "get_details", {"node": node}, store, format)
+    _run("graph", "get_details", {"node": node}, format)
 
 
 @app.command()
 def find(type: Optional[str] = typer.Argument(None), name: Optional[str] = typer.Option(None),
          where: Optional[str] = typer.Option(None, help='Filters as JSON, e.g. \'{"status": "churned"}\'.'),
-         store: str = StoreOpt, format: str = FormatOpt):
+         format: str = FormatOpt):
     """Look nodes up in the graph."""
-    _run("graph", "find", {"type": type, "name": name, "filters": json.loads(where) if where else None},
-         store, format)
+    _run("graph", "find", {"type": type, "name": name, "filters": json.loads(where) if where else None}, format)
 
 
 @records_app.command("search")
 def records_search(query: str, type: Optional[str] = typer.Option(None), limit: int = 10,
                    format: str = FormatOpt):
     """Keyword search, as the Records agent would run it."""
-    _run("records", "search", {"query": query, "type": type, "limit": limit}, "memory", format)
+    _run("records", "search", {"query": query, "type": type, "limit": limit}, format)
 
 
 DATE_FIELDS = {"customers": "churned_at", "tickets": "created_at", "decisions": "date"}
@@ -159,13 +152,13 @@ def records_list(type: str, status: Optional[str] = typer.Option(None),
         filters["status"] = status
     if since:
         filters[DATE_FIELDS.get(type, "created_at")] = {"gte": since}
-    _run("records", "list_records", {"type": type, "filters": filters, "limit": limit}, "memory", format)
+    _run("records", "list_records", {"type": type, "filters": filters, "limit": limit}, format)
 
 
 @records_app.command("get")
 def records_get(id: str, format: str = FormatOpt):
     """One record's own fields."""
-    _run("records", "get_record", {"id": id}, "memory", format)
+    _run("records", "get_record", {"id": id}, format)
 
 
 @ontology_app.command("show")
@@ -206,14 +199,13 @@ def ontology_pending():
 @ontology_app.command("apply")
 def ontology_apply(ids: Optional[list[str]] = typer.Argument(None, help="Proposal ids, e.g. p1 p2."),
                    all_: bool = typer.Option(False, "--all", help="Apply every valid pending proposal."),
-                   by: str = typer.Option(..., "--by", help="Who reviewed them."),
-                   store: str = StoreOpt):
+                   by: str = typer.Option(..., "--by", help="Who reviewed them.")):
     """Apply reviewed proposals to the live ontology, and reload the graph once."""
     if all_:
         ids = [p["id"] for p in proposals.pending()["pending"] if p["valid"]]
     if not ids:
         raise typer.BadParameter("Give proposal ids, or --all.")
-    result = _change(lambda: proposals.apply(tools.Context(store), ids, by))
+    result = _change(lambda: proposals.apply(tools.Context(), ids, by))
     for r in result["applied"]:
         typer.echo(f"  {r['id']}: loaded {r['loaded']} {r['unit']}")
 
@@ -236,12 +228,11 @@ def _change(fn) -> dict:
 
 
 @ontology_app.command("reset")
-def ontology_reset(store: str = StoreOpt):
-    """Restore ontology.initial.yaml (dropping pending proposals) and reload, so the demo can run again."""
+def ontology_reset():
+    """Restore ontology.initial.yaml (dropping pending proposals) and reload Neo4j, so the demo can run again."""
+    from data import load_graph
     onto = onto_mod.reset()
-    if store == "neo4j":
-        from data import load_graph
-        load_graph.load(onto)
+    load_graph.load(onto)
     typer.echo(f"Ontology reset to {onto_mod.INITIAL_PATH.name}: {len(onto.entities)} entities, "
                f"{len(onto.relationships)} relationships.")
 

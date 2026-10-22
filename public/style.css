@@ -157,6 +157,17 @@ img.logo {
   border-radius: 5px;
   background: hsl(var(--muted));
 }
+.wander-info-readme {
+  display: none !important;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: hsl(var(--primary));
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .wander-info-note {
   margin: 0 !important;
   font-size: 13px;
@@ -173,8 +184,12 @@ img.logo {
   }
 }
 
-/* Phones: sit next to the new-chat button instead of centred, so it clears the right-hand links. */
+/* Phones: sit next to the new-chat button instead of centred. Three modes don't fit beside
+   the Readme button too, so it moves into the info panel. */
 @media (max-width: 520px) {
+  .wander-has-switch #readme-button {
+    display: none;
+  }
   .wander-modes {
     left: 54px;
     transform: translateY(-50%);
@@ -182,18 +197,254 @@ img.logo {
   }
   .wander-radio {
     gap: 5px;
-    padding: 5px 9px 5px 8px;
+    padding: 5px 8px 5px 7px;
     font-size: 13px;
   }
   .wander-dot {
     width: 7px;
     height: 7px;
   }
+  .wander-info-readme {
+    display: inline-block !important;
+  }
+  /* The switch sits 54px in (and its transform makes it the panel's containing block, even
+     for position: fixed), so this puts the panel 16px from the screen's left edge. */
   .wander-info {
-    position: fixed;
-    top: 64px;
-    left: 16px;
+    left: -38px;
     transform: none;
     width: calc(100vw - 32px);
+  }
+}
+.wander-radio[data-mode="Compare"][aria-checked="true"] .wander-dot {
+  background: linear-gradient(90deg, #475569 50%, #ea580c 50%);
+  border-color: transparent;
+}
+
+/* Compare mode: the two answers side by side (public/elements/Compare.jsx). */
+.wander-compare {
+  --wc-records: #475569;
+  --wc-graph: #c2410c;
+  width: 100%;
+  font-size: 14.5px;
+}
+.dark .wander-compare {
+  --wc-records: #94a3b8;
+  --wc-graph: #fb923c;
+}
+.wc-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.wc-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 14px 14px;
+  border: 1px solid hsl(var(--border));
+  border-top: 3px solid var(--wc-side);
+  border-radius: 12px;
+  background: hsl(var(--card));
+}
+.wc-records { --wc-side: var(--wc-records); }
+.wc-graph { --wc-side: var(--wc-graph); }
+
+.wc-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.wc-dot {
+  align-self: center;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--wc-side);
+}
+.wc-label {
+  font-weight: 650;
+}
+.wc-hint {
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+}
+.wc-status {
+  margin-left: auto;
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+}
+.wc-status-thinking,
+.wc-status-looking,
+.wc-status-writing {
+  animation: wc-pulse 1.4s ease-in-out infinite;
+}
+.wc-status-error {
+  color: hsl(var(--destructive));
+}
+@keyframes wc-pulse {
+  50% { opacity: 0.45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wc-status-thinking, .wc-status-looking, .wc-status-writing, .wc-running { animation: none; }
+}
+
+.wc-steps {
+  font-size: 13px;
+  border-radius: 8px;
+  background: hsl(var(--muted) / 0.5);
+}
+.wc-steps > summary {
+  padding: 6px 10px;
+  cursor: pointer;
+  color: hsl(var(--muted-foreground));
+}
+.wc-steps ol {
+  margin: 0;
+  padding: 0 10px 8px 30px;
+}
+.wc-step {
+  margin: 3px 0;
+}
+.wc-step summary {
+  cursor: pointer;
+}
+.wc-step-error .wc-step-title {
+  color: hsl(var(--destructive));
+}
+.wc-running {
+  animation: wc-pulse 1.4s ease-in-out infinite;
+}
+.wc-step pre {
+  margin: 6px 0 8px;
+  padding: 8px 10px;
+  max-height: 320px;
+  overflow: auto;
+  border-radius: 6px;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.wc-answer {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+/* Chainlit puts each table in its own scrolling box; in a half-width column, let it scroll
+   sideways rather than break words letter by letter, and pack the cells tighter. */
+.wc-answer table {
+  overflow-wrap: normal;
+}
+.wc-answer th,
+.wc-answer td {
+  padding: 6px 10px !important;
+  height: auto !important;
+  min-width: 4.5em;
+}
+.wc-waiting,
+.wc-error {
+  margin: 0;
+  color: hsl(var(--muted-foreground));
+}
+.wc-error {
+  color: hsl(var(--destructive));
+}
+
+.wc-only {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed hsl(var(--border));
+  font-size: 12.5px;
+}
+.wc-only-label {
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin-right: 2px;
+}
+.wc-only-none {
+  color: hsl(var(--muted-foreground));
+}
+.wc-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--wc-side);
+  color: hsl(var(--foreground));
+}
+.wc-chip-kind {
+  font-size: 11px;
+  color: hsl(var(--muted-foreground));
+}
+
+/* The work strip: tool calls, tokens and time for each side. */
+.wc-work {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+  font-size: 12.5px;
+}
+.wc-work-row {
+  display: grid;
+  grid-template-columns: 76px repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+.wc-work-label {
+  color: hsl(var(--muted-foreground));
+}
+.wc-work-cell {
+  position: relative;
+  display: block;
+  padding: 2px 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wc-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--wc-side);
+  opacity: 0.16;
+  transition: width 0.3s;
+}
+.wc-work-value {
+  position: relative;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chainlit keeps the conversation, and each message in it, 48rem wide. Two answers side by
+   side get the whole window; the other messages stay 48rem, centred as usual. */
+div.mx-auto.flex-col:has(.wander-compare) {
+  max-width: 100% !important;
+}
+div.mx-auto.flex-col:has(.wander-compare) div.step > div[style*="max-width"] {
+  margin-inline: auto;
+}
+div.step > div[style*="max-width"]:has(.wander-compare) {
+  max-width: 100% !important;
+}
+
+/* Narrow screens: one answer above the other. */
+@media (max-width: 760px) {
+  .wc-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wc-work-row {
+    grid-template-columns: 64px repeat(2, minmax(0, 1fr));
+    gap: 6px;
   }
 }

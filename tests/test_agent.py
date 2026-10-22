@@ -7,7 +7,7 @@ import pytest
 
 from wander import tools
 from wander.chat import agent, prompts
-from wander.stores.records import RecordsStore
+from wander.records.store import RecordsStore
 
 
 class FakeStream:
@@ -52,7 +52,7 @@ class FakeClient:
 
 
 def run(toolset, client):
-    ctx = tools.Context("memory")
+    ctx = tools.Context()
     return asyncio.run(agent.answer([{"role": "user", "content": "Why?"}], toolset, ctx, client=client))
 
 
@@ -65,7 +65,7 @@ def records_db():
         load_records.load()
 
 
-def test_both_modes_get_the_same_model_prompt_and_settings(ontology_file):
+def test_both_modes_get_the_same_model_prompt_and_settings(ontology_file, graph):
     seen = {}
     for toolset in ("records", "graph"):
         client = FakeClient(tool_calls=1)
@@ -86,7 +86,7 @@ def test_system_prompt_is_neutral():
         assert word not in text
 
 
-def test_stops_at_the_tool_call_cap(ontology_file):
+def test_stops_at_the_tool_call_cap(ontology_file, graph):
     cap = prompts.SETTINGS["max_tool_calls"]
     client = FakeClient(tool_calls=cap + 5)
     result = run("graph", client)
@@ -103,15 +103,17 @@ def test_footer_reports_the_work(ontology_file):
 
 
 def test_records_store_is_a_fair_fight():
-    from wander.stores.graph import InMemoryStore
-    from wander.ontology import INITIAL_PATH, Ontology
+    from collections import Counter
+
+    from data.source import read_generated
 
     records = RecordsStore()
-    graph = InMemoryStore(Ontology.load(INITIAL_PATH))
+    nodes, _ = read_generated()
+    in_data = Counter(n["type"] for n in nodes)
     counts = records.counts()
-    assert counts["customers"] == graph.count("Customer")
-    assert counts["tickets"] == graph.count("Ticket")
-    assert counts["documents"] == graph.count("Document")
+    assert counts["customers"] == in_data["Customer"]
+    assert counts["tickets"] == in_data["Ticket"]
+    assert counts["documents"] == in_data["Document"]
 
     five = records.list_records("customers", {"status": "churned", "churned_at": {"gte": "2026-07-01"}})
     assert five["total"] == 5 and len({c["churn_reason"] for c in five["records"]}) == 5

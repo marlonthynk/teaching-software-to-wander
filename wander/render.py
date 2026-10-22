@@ -17,8 +17,8 @@ def wander_text(r: dict) -> str:
     names = ", ".join(a["name"] for a in r["anchors"])
     out.append(f"Wander from {len(r['anchors'])} {r['anchors'][0]['type']}: {names}")
     s = r["settings"]
-    out.append(f"max_hops={s['max_hops']}  min_support={s['min_support']}  min_lift={s['min_lift']}  "
-               f"max_nodes={s['max_nodes']}  prune={s['prune']}")
+    out.append(f"max_hops={s['max_hops']}  explain_hops={s['explain_hops']}  min_support={s['min_support']}  "
+               f"min_lift={s['min_lift']}  prune={s['prune']}")
     out.append("")
     out.append(r["summary"])
 
@@ -64,7 +64,7 @@ def _step(st: dict) -> str:
 
 
 def base_rate_text(r: dict) -> str:
-    return (f"{r['node']['type']} {r['node']['name']}  {r['pattern']}"
+    return (f"{r['node']['type']} {r['node']['name']}"
             f"{'  since ' + r['since'] if r['since'] else ''}\n"
             f"  with:    {r['with']['outcome']}/{r['with']['count']} ({r['with']['rate']:.0%})\n"
             f"  without: {r['without']['outcome']}/{r['without']['count']} ({r['without']['rate']:.0%})\n\n"

@@ -285,28 +285,14 @@ def write(co: Company, scenarios, facts, out: Path = OUT) -> None:
 
 
 def main() -> None:
-    import shutil
-    import tempfile
-
-    from data.scenarios.verify import check_all
-
-    co, scenarios, facts = build()
-    # Write to a scratch folder, check every scenario with the real wander, then move into place.
-    with tempfile.TemporaryDirectory() as tmp:
-        write(co, scenarios, facts, Path(tmp))
-        manifest = json.loads((Path(tmp) / "scenarios.json").read_text())
-        failures = check_all(manifest, data_dir=Path(tmp))
-        if failures:
-            raise GeneratorError("Scenarios don't hold:\n  " + "\n  ".join(failures))
-        OUT.mkdir(parents=True, exist_ok=True)
-        for name in ("nodes.json", "edges.json", "scenarios.json"):
-            shutil.copyfile(Path(tmp) / name, OUT / name)
+    co, scenarios, facts = build()   # build() fails loudly if any constraint or scenario fact breaks
+    write(co, scenarios, facts)
     counts: dict[str, int] = {}
     for node in co.nodes.values():
         counts[node["type"]] = counts.get(node["type"], 0) + 1
     print("Generated", ", ".join(f"{v} {k}" for k, v in sorted(counts.items())),
           f"and {len(co.edges)} edges into {OUT}")
-    print(f"All {len(scenarios)} scenarios hold.")
+    print("To check the wander finds every story: load Neo4j, then run `uv run pytest tests/test_scenarios.py`.")
 
 
 if __name__ == "__main__":

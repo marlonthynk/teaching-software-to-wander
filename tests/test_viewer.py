@@ -8,14 +8,16 @@ from http.server import ThreadingHTTPServer
 
 import pytest
 
-from wander import core, tools
+from wander import tools
+from wander.graph.lookups import find
+from wander.graph.wander import wander
 from wander.ontology import Ontology
 from wander.viewer.server import make_handler
 
 
 @pytest.fixture
-def viewer(ontology_file):
-    server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(tools.Context("memory")))
+def viewer(ctx):
+    server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(ctx))
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     yield f"http://127.0.0.1:{server.server_address[1]}"
@@ -57,11 +59,11 @@ def test_proposals_wait_for_review(viewer, ontology_file):
 
 
 def test_a_developer_applies_them(viewer, ontology_file):
-    chat = tools.Context("memory")  # stands in for the chat app, opened before any change
-    overdue = [n["id"] for n in core.find(chat.graph, "Customer", {"payment_status": "overdue"})["nodes"]]
+    chat = tools.Context()  # stands in for the chat app, opened before any change
+    overdue = [n["id"] for n in find(chat.graph, "Customer", {"payment_status": "overdue"})["nodes"]]
     post(viewer, "/propose", PARTNER)
     post(viewer, "/propose", REFERRED_BY)
-    assert core.wander(chat.graph, overdue)["convergence"] == []  # proposed, not applied
+    assert wander(chat.graph, overdue)["convergence"] == []  # proposed, not applied
 
     status, body = post(viewer, "/apply", {"ids": ["p2"], "reviewed_by": "Marlon"})
     assert status == 400 and "apply that one too" in body["error"]
@@ -71,7 +73,7 @@ def test_a_developer_applies_them(viewer, ontology_file):
     onto = Ontology.load(ontology_file)
     assert "REFERRED_BY" in onto.relationships and not onto.proposals
     assert onto.changelog[-1]["by"] == "Tom" and onto.changelog[-1]["reviewed_by"] == "Marlon"
-    assert core.wander(chat.graph, overdue)["convergence"][0]["name"] == "Northwind Consulting"
+    assert wander(chat.graph, overdue)["convergence"][0]["name"] == "Northwind Consulting"
 
 
 def test_a_developer_rejects_one(viewer, ontology_file):

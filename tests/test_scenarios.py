@@ -1,4 +1,4 @@
-"""Every scenario's expected outcome, parametrised over scenarios.json.
+"""Every scenario's expected outcome, on Neo4j, parametrised over scenarios.json.
 
 Adding a scenario adds a case here automatically.
 """
@@ -15,8 +15,8 @@ SCENARIOS = json.loads((ROOT / "data" / "generated" / "scenarios.json").read_tex
 
 
 @pytest.mark.parametrize("scenario", SCENARIOS, ids=[s["name"] for s in SCENARIOS])
-def test_scenario(scenario, store):
-    assert check(scenario, store) == []
+def test_scenario(scenario, graph):
+    assert check(scenario, graph) == []
 
 
 def test_the_wander_knows_nothing_about_any_scenario():
@@ -26,7 +26,7 @@ def test_the_wander_knows_nothing_about_any_scenario():
         conv = s["expected"].get("convergence")
         if conv:
             forbidden.add(conv["name"])
-    for path in (ROOT / "wander").rglob("*.py"):
+    for path in [*(ROOT / "wander").rglob("*.py"), *(ROOT / "wander").rglob("*.cypher")]:
         text = path.read_text()
         for word in forbidden:
             assert word not in text, f"{path.name} mentions {word!r}"

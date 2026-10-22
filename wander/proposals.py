@@ -11,7 +11,7 @@ The chat can't change the ontology: its agents only read it (view_ontology).
 from __future__ import annotations
 
 from wander.ontology import Ontology
-from wander.stores.graph import read_generated, visible_data
+from data.source import read_generated, visible_data
 
 UNITS = {"entity": "nodes", "relationship": "relationships", "property": "values"}
 

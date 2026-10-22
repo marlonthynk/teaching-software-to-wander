@@ -11,8 +11,8 @@ from __future__ import annotations
 import re
 from collections import defaultdict
 
+from data.source import read_generated, visible_data
 from wander.ontology import Ontology
-from wander.stores.graph import neo4j_settings, read_generated, visible_data
 
 
 def load(ontology: Ontology | None = None, driver=None) -> dict:
@@ -21,7 +21,9 @@ def load(ontology: Ontology | None = None, driver=None) -> dict:
     own_driver = driver is None
     if own_driver:
         from neo4j import GraphDatabase
-        uri, user, password = neo4j_settings()
+
+        from wander.graph.db import settings
+        uri, user, password = settings()
         driver = GraphDatabase.driver(uri, auth=(user, password))
     try:
         by_label: dict[str, list] = defaultdict(list)

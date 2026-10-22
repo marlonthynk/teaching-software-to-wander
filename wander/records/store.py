@@ -11,7 +11,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-from wander.stores import filters
+from wander import filters
 
 DB_PATH = Path(__file__).resolve().parents[2] / "data" / "records.db"
 
@@ -64,7 +64,8 @@ class RecordsStore:
         for table in TABLES:
             row = self.db.execute(f"SELECT * FROM {table} WHERE id = ?", (record_id,)).fetchone()
             if row:
-                return {"type": table, **{k: v for k, v in dict(row).items() if v is not None}}
+                # "record_type" is the table; a document also has its own "type" (plan, memo, …)
+                return {"record_type": table, **{k: v for k, v in dict(row).items() if v is not None}}
         return None
 
     def list_records(self, type: str, filters_: dict | None = None, limit: int = 25) -> dict:

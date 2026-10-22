@@ -1,14 +1,18 @@
-// A Records | Graph switch in the header, in place of Chainlit's chat-profile dropdown.
+// A Compare | Records | Graph switch in the header, in place of Chainlit's chat-profile dropdown.
 // It drives Chainlit's own profile select underneath, so switching still starts a new chat
 // (and Chainlit still asks for confirmation when the current chat has messages).
 (() => {
   const MODES = [
+    { name: "Compare", hint: "both at once" },
     { name: "Records", hint: "records + search" },
     { name: "Graph", hint: "wander the graph" },
   ];
   const INFO = `
     <p class="wander-info-lead">Same company data, same Claude, same prompt. Only the store differs.</p>
     <dl>
+      <dt>Compare</dt>
+      <dd>Every question goes to both agents at the same time, and the two answers come back side by side,
+          with what each one looked at and the work it took.</dd>
       <dt>Records</dt>
       <dd>An ordinary store: customer, ticket and document records with keyword search, the way most
           teams' systems look. The agent can search, open a record, and list records with filters.</dd>
@@ -16,7 +20,9 @@
       <dd>The same data as a graph. The agent calls one <code>wander</code> tool that walks out from what
           you ask about, keeps where the paths converge more than chance would explain, and prunes the rest.</dd>
     </dl>
-    <p class="wander-info-note">Switching mode starts a new chat, so neither answer can see the other.</p>`;
+    <p class="wander-info-note">Each agent keeps its own conversation, so neither answer can see the other.
+       Switching mode starts a new chat.</p>
+    <button type="button" class="wander-info-readme">Open the readme</button>`;
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const trigger = () => document.getElementById("chat-profiles");
@@ -74,7 +80,7 @@
           <circle cx="10" cy="6.1" r="1.1" fill="currentColor"/>
         </svg>
       </button>
-      <div id="wander-info-panel" class="wander-info" role="dialog" aria-label="Records and Graph" hidden>${INFO}</div>`;
+      <div id="wander-info-panel" class="wander-info" role="dialog" aria-label="The three modes" hidden>${INFO}</div>`;
 
     const radios = [...root.querySelectorAll(".wander-radio")];
     radios.forEach((r, i) => {
@@ -98,6 +104,11 @@
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       setOpen(panel.hidden);
+    });
+    // On phones the Readme button is hidden to make room; this opens it from the panel instead.
+    panel.querySelector(".wander-info-readme").addEventListener("click", () => {
+      setOpen(false);
+      document.getElementById("readme-button")?.click();
     });
     document.addEventListener("click", (e) => {
       if (!panel.hidden && !root.contains(e.target)) setOpen(false);

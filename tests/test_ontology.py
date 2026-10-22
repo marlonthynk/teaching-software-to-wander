@@ -3,7 +3,9 @@
 import pytest
 
 from data.load_graph import find_stale
-from wander import core, proposals, tools
+from wander import proposals, tools
+from wander.graph.lookups import find
+from wander.graph.wander import wander
 from wander import ontology as onto_mod
 from wander.ontology import Ontology, OntologyError
 
@@ -15,18 +17,13 @@ REFERRED_BY = {"kind": "relationship", "name": "REFERRED_BY", "from": "Customer"
                "description": "The partner that referred this customer.", "proposed_by": "Tom"}
 
 
-@pytest.fixture
-def ctx(ontology_file):
-    return tools.Context("memory")
-
-
 def q3(ctx):
-    found = core.find(ctx.graph, "Customer", {"churned_at": {"gte": "2026-07-01", "lte": "2026-09-30"}})
+    found = find(ctx.graph, "Customer", {"churned_at": {"gte": "2026-07-01", "lte": "2026-09-30"}})
     return [n["id"] for n in found["nodes"]]
 
 
 def members(ctx):
-    return core.wander(ctx.graph, q3(ctx))["convergence"][0]["other_members"]["members"]
+    return wander(ctx.graph, q3(ctx))["convergence"][0]["other_members"]["members"]
 
 
 def propose_and_apply(ctx, *changes, by="Marlon"):
@@ -79,11 +76,11 @@ def test_escalations_show_an_absence(ctx):
 
 
 def test_partner_unlock_finds_northwind(ctx):
-    overdue = [n["id"] for n in core.find(ctx.graph, "Customer", {"payment_status": "overdue"})["nodes"]]
-    assert core.wander(ctx.graph, overdue)["convergence"] == []
+    overdue = [n["id"] for n in find(ctx.graph, "Customer", {"payment_status": "overdue"})["nodes"]]
+    assert wander(ctx.graph, overdue)["convergence"] == []
     result = propose_and_apply(ctx, PARTNER, REFERRED_BY)
     assert [a["loaded"] for a in result["applied"]] == [2, 12]
-    top = core.wander(ctx.graph, overdue)["convergence"][0]
+    top = wander(ctx.graph, overdue)["convergence"][0]
     assert top["name"] == "Northwind Consulting" and "quarterly invoicing" in top["properties"]["notes"]
 
 

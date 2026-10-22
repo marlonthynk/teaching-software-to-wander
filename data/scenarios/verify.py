@@ -1,11 +1,11 @@
-"""Check a scenario's expected outcome against the real wander.
+"""Check a scenario's expected outcome against the real wander, on Neo4j.
 
-Used by tests/test_scenarios.py and by the generator (which refuses to write data that
-fails). Expected-outcome keys, all optional except anchor_count and convergence:
+Used by tests/test_scenarios.py. Expected-outcome keys, all optional except anchor_count
+and convergence:
 
     anchor_count           how many nodes the anchor selector picks
     before_ontology        {"convergence": ...} expected before ontology_additions are applied
-    ontology_additions     changes (as for propose_change) to apply before the main check
+    ontology_additions     changes to apply (as a developer would) before the main check
     convergence            {"type", "name"} of the top kept node, or None for "nothing found"
     lift_range             [low, high] for the top kept node's lift
     explanation_includes   names that must appear in its explanation
@@ -17,41 +17,46 @@ fails). Expected-outcome keys, all optional except anchor_count and convergence:
 
 from __future__ import annotations
 
-from wander import core
-from wander.ontology import Ontology
-from wander.stores.graph import InMemoryStore
+from wander.graph.db import Graph
+from wander.graph.lookups import find
+from wander.graph.wander import compare_base_rate, wander
+from wander.ontology import INITIAL_PATH, Ontology
 
 
-def check(scenario: dict, store: InMemoryStore) -> list[str]:
+def check(scenario: dict, graph: Graph) -> list[str]:
+    """Run one scenario's question through the wander and compare with what it should find.
+    If the scenario needs ontology additions, they're loaded into Neo4j for the check, and the
+    graph is reloaded with the original ontology afterwards."""
     exp = scenario["expected"]
     name = scenario["name"]
-    original = store.ontology
+    original = graph.ontology
     failures: list[str] = []
     try:
         if "before_ontology" in exp:
-            failures += _check_convergence(name + " (before ontology change)", _run(store, scenario),
+            failures += _check_convergence(name + " (before ontology change)", _run(graph, scenario),
                                            {"convergence": exp["before_ontology"]["convergence"]})
         if exp.get("ontology_additions"):
             onto = original.copy()
             for change in exp["ontology_additions"]:
                 onto.apply(change)
-            store.reload(onto)
-        result = _run(store, scenario)
+            graph.reload(onto)
+        result = _run(graph, scenario)
         if len(result["anchors"]) != exp["anchor_count"]:
             failures.append(f"{name}: expected {exp['anchor_count']} anchors, got {len(result['anchors'])}")
         failures += _check_convergence(name, result, exp)
         failures += _check_pruned(name, result, exp.get("pruned_include", []))
         if "base_rate" in exp:
-            failures += _check_base_rate(name, store, exp["base_rate"])
+            failures += _check_base_rate(name, graph, exp["base_rate"])
     finally:
-        store.reload(original)
+        if exp.get("ontology_additions"):
+            graph.reload(original)
     return failures
 
 
-def _run(store, scenario) -> dict:
+def _run(graph, scenario) -> dict:
     sel = scenario["anchors"]
-    anchors = [n.id for n in store.find(type_=sel["type"], where=sel.get("where"), limit=10000)]
-    return core.wander(store, anchors)
+    anchors = [n["id"] for n in find(graph, sel["type"], sel.get("where"), limit=200)["nodes"]]
+    return wander(graph, anchors)
 
 
 def _check_convergence(name, result, exp) -> list[str]:
@@ -92,15 +97,19 @@ def _check_pruned(name, result, wanted) -> list[str]:
     return out
 
 
-def _check_base_rate(name, store, exp) -> list[str]:
-    r = core.compare_base_rate(store, exp["node"], since=exp.get("since"), outcome=exp["outcome"])
+def _check_base_rate(name, graph, exp) -> list[str]:
+    r = compare_base_rate(graph, exp["node"], since=exp.get("since"), outcome=exp["outcome"])
     got = ([r["with"]["outcome"], r["with"]["count"]], [r["without"]["outcome"], r["without"]["count"]])
     if got != (exp["with"], exp["without"]):
         return [f"{name}: base rate {got}, expected {exp['with']} vs {exp['without']}"]
     return []
 
 
-def check_all(scenarios: list[dict], data_dir=None, ontology: Ontology | None = None) -> list[str]:
-    from wander.ontology import INITIAL_PATH
-    store = InMemoryStore(ontology or Ontology.load(INITIAL_PATH), data_dir)
-    return [f for s in scenarios for f in check(s, store)]
+def check_all(scenarios: list[dict]) -> list[str]:
+    """Every scenario, on Neo4j loaded through the initial ontology."""
+    graph = Graph(Ontology.load(INITIAL_PATH))
+    graph.reload(graph.ontology)
+    try:
+        return [f for s in scenarios for f in check(s, graph)]
+    finally:
+        graph.close()

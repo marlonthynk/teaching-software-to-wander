@@ -9,7 +9,7 @@ This repo holds the same fictional company in two stores — **Records** (SQLite
 ## What you need
 
 - Python 3.11+ and [uv](https://docs.astral.sh/uv/)
-- Docker, for Neo4j (optional: everything also runs with `--store memory`)
+- Docker, for Neo4j
 - An [Anthropic API key](https://console.anthropic.com/) for the chat app (optional: see [No API key?](#no-api-key) below)
 
 ## Set up (about 10 minutes)
@@ -48,23 +48,22 @@ uv run chainlit run app.py
 
 It opens at http://localhost:8000.
 
-No Docker? Skip `docker compose up -d`, set `WANDER_STORE=memory` in `.env`, and run `uv run python -m wander.cli load --store memory`. The graph is then held in memory, loaded from the same JSON.
-
 ## The chat app
 
-The app has two modes, picked with the **Records | Graph** switch at the top (the ⓘ next to it explains the difference):
+The app has three modes, picked with the **Compare | Records | Graph** switch at the top (the ⓘ next to it explains the difference):
 
+- **Compare** (the default) — every question goes to both agents at once, and the two answers stream in side by side. Under them, a strip compares the work each one did (tool calls, tokens, time), and once both have finished, each answer lists the things in the company it names that the other doesn't ("Only in this answer"). That last part is plain text matching against the names in the data, not another call to Claude.
 - **Records** — an ordinary store: records and keyword search. The agent can search, get one record, and list records with simple filters.
-- **Graph** (the default) — the same data as a graph the agent can wander. The agent calls one `wander` tool; the server does the walking and pruning and hands back a small, explained result.
+- **Graph** — the same data as a graph the agent can wander. The agent calls one `wander` tool; the server does the walking and pruning and hands back a small, explained result.
 
-Switching mode starts a new chat, so neither agent ever sees the other's answer. Each tool call shows up as a step you can open to see exactly what the agent asked for and the raw context it got back. Each answer ends with a footer: tool calls, tokens and time.
+The two agents never see each other's answers: each keeps its own conversation, in Compare mode too, and a follow-up question goes to both. Switching mode starts a new chat. Each tool call shows up as a step you can open to see what the agent asked for and what came back (Records and Graph also show the raw JSON). Each answer ends with a footer: tool calls, tokens and time.
 
 There's a starter button for each scenario (below). Charlene's question is the first.
 
 ## Demo script
 
-1. **Ask in Records.** The app opens in Graph, so switch to Records at the top first. Pick *"Why did the five customers who churned in Q3 2026 leave?"*. Watch it list the five customers and their CRM churn reasons. Open the steps.
-2. **Ask in Graph.** Switch back to Graph and ask again. Open the `wander from 5 customers…` step: the paths to the Integrations queue, what's behind it (the reorg, the plan, Daniela's comment), the other customers on the same thread, and what was pruned and why.
+1. **Ask both.** The app opens in Compare. Pick *"Why did the five customers who churned in Q3 2026 leave?"*. On the left, Records lists the five customers and their CRM churn reasons; on the right, Graph finds the Integrations queue they all have in common. Compare the "Only in this answer" chips and the work strip underneath.
+2. **Open the steps.** In the Graph column, open *What it looked at*, then the `wander from 5 customers…` step: the paths to the Integrations queue, what's behind it (the reorg, the plan, Daniela's comment), the other customers on the same thread, and what was pruned and why. To see one agent on its own with the raw JSON it received, switch to Records or Graph and ask again.
 3. **See the raw context**, with no LLM involved:
 
    ```bash
@@ -133,10 +132,10 @@ PRUNED
   Feature SSO — low support: 2 of 5 starting points, 9 of 67 of the population, lift 2.98
   …
 
-STATS  nodes visited: 196 · hubs not expanded: 8 · nodes returned: 32 · approx tokens: 4028
+STATS  population: 67 Customer · shared things: 10 · kept: 1 · explained: 4 · pruned: 8 · nodes returned: 32 · approx tokens: 4035
 ```
 
-The same run with `--max-hops 6 --no-prune` returns **413 nodes and about 208,000 tokens**, against about 4,000 with the guardrails on. With `--max-hops 1` it finds nothing.
+The same run with `--max-hops 6 --no-prune` returns **408 nodes and about 205,000 tokens**, against about 4,000 with the guardrails on. With `--max-hops 1` it finds nothing.
 
 `base-rate "Integrations" --since 2026-03-15`:
 
@@ -207,16 +206,15 @@ Each scenario is one module in `data/scenarios/` with its question, how to pick 
 
 ## How the wander works
 
-`wander/core.py`, in short:
+The graph does the work, in three Cypher queries you can read — and paste into Neo4j Browser — in [`wander/graph/queries/`](wander/graph/queries/):
 
-1. **Expand** breadth-first from all the starting points at once, following only relationships the ontology declares, up to a hop limit and a node budget.
-2. **Don't wander through hubs.** If most of the population reaches a node the same way (General support, used by 64 of 67 customers), sharing it says nothing, so the walk doesn't go through it. Nor does it wander on through other customers: who else shares a thread is step 6.
-3. **Converge.** Keep nodes that enough of the starting points reach (support).
-4. **Discount by lift**: how much more often than chance. The Integrations queue: 5 of 5 starting points, 27 of 67 customers overall, lift 2.5.
-5. **Explain, don't repeat.** Things that sit behind a finding (the reorg decision, the plan, Daniela's comment) become its explanation, not separate findings.
-6. **Who else shares the thread**: other customers who reach the finding the same way.
+1. **Walk and meet** — [`1_meet.cypher`](wander/graph/queries/1_meet.cypher). From every customer, follow relationships outwards (up to 3 steps), never visiting the same kind of thing twice on one path — so the walk goes Customer → Ticket → Queue → Decision, but never on to someone else's ticket. For each thing reached, by each route, count how many of the starting points reach it (**support**) and how many of all customers do (**reach**). **Lift** is how much more than chance: the Integrations queue is reached by 5 of the 5, but only 27 of 67 customers — 2.5×. General support is reached by all 5, but by 64 of 67 too — a **hub**, so it says nothing.
+2. **Explain** — [`2_explain.cypher`](wander/graph/queries/2_explain.cypher). From a finding, walk on — away from the way the starting points came in — to the reason behind it: the queue was retired by a decision, written up in a plan, which Daniela commented on.
+3. **Who else** — [`3_who_else.cypher`](wander/graph/queries/3_who_else.cypher). Everyone else who reaches the finding the same way: the 22 other customers with tickets in that queue, 12 of them still open.
 
-The server runs this loop, not Claude, so the same question on the same data gives the same context every time. Only Claude's wording varies.
+[`wander/graph/wander.py`](wander/graph/wander.py) runs them in order. The only judgement it makes in Python: anything a finding's explanation reaches (the reorg decision) is part of that finding, not a finding of its own. [`base_rate.cypher`](wander/graph/queries/base_rate.cypher) adds the numbers — 29% churn vs 4% — when Claude asks for them.
+
+The server runs these queries, not Claude, so the same question on the same data gives the same context every time. Only Claude's wording varies.
 
 ## Is it a fair fight?
 
@@ -257,22 +255,24 @@ claude mcp add company-graph -- uv run --directory "$PWD" python -m wander.mcp.g
     },
     "company-graph": {
       "command": "uv",
-      "args": ["run", "--directory", "/path/to/teaching-software-to-wander", "python", "-m", "wander.mcp.graph"],
-      "env": {"WANDER_STORE": "neo4j"}
+      "args": ["run", "--directory", "/path/to/teaching-software-to-wander", "python", "-m", "wander.mcp.graph"]
     }
   }
 }
 ```
 
-Use `"WANDER_STORE": "memory"` if Neo4j isn't running. The servers (`wander/mcp/`) are thin wrappers over `wander/tools.py`: the same tools the chat app gives Claude. Only the model and system prompt are now your client's, so the comparison is a little less controlled than in the chat app.
+The graph server needs Neo4j running. The servers (`wander/mcp/`) are thin wrappers over `wander/tools.py`: the same tools the chat app gives Claude. Only the model and system prompt are now your client's, so the comparison is a little less controlled than in the chat app.
 
 ## In Neo4j Browser
 
-`queries/wander.cypher` is a hand-written, commented query that draws Charlene's path. Open http://localhost:7474 (user `neo4j`, password from `.env`), paste it in, and switch to the graph view.
+Open http://localhost:7474 (user `neo4j`, password from `.env`).
+
+- `queries/wander.cypher` is a hand-written query that draws Charlene's path, for the article's picture. Paste it in and switch to the graph view.
+- The wander's own queries are in `wander/graph/queries/`. They take parameters, e.g. run `:param anchors => ['cust_001','cust_021','cust_034','cust_056','cust_059']`, `:param population => 'Customer'`, `:param min_support => 0.6` and `:param min_lift => 2.0`, then paste `1_meet.cypher` with `__MAX_HOPS__` replaced by `3`.
 
 ## Tests
 
-No Docker or API key needed:
+They need Neo4j running (`docker compose up -d`), but no API key. Without Neo4j, the graph tests are skipped with a message. They start from the initial ontology and leave Neo4j as your `ontology.yaml` says when they finish.
 
 ```bash
 uv run pytest
@@ -282,25 +282,31 @@ uv run pytest
 
 ```
 wander/
-├── core.py          the wander, the base rate, details and find   ← start here
-├── guardrails.py    hop limit, node budget, support and lift
-├── ontology.py      load and validate the ontology; propose, review, apply
-├── proposals.py     the same, with the graph kept in step
-├── tools.py         both toolsets, defined once
-├── render.py        readable text for tool results
-├── stores/          where the data lives: graph (Neo4j, in-memory), records (SQLite)
-├── chat/            the tool-use loop and the shared system prompt
-├── mcp/             the optional MCP servers
-├── viewer/          the ontology viewer and its Review page
-└── cli.py           the command line
+├── graph/                  Neo4j: the wander, as Cypher        ← start here
+│   ├── queries/            1_meet, 2_explain, 3_who_else, base_rate, lookups (.cypher)
+│   ├── wander.py           runs the queries in order and shapes the result
+│   ├── lookups.py          find, get_details
+│   ├── tools.py            the Graph agent's tools
+│   └── db.py               the connection; runs a query file, read-only
+├── records/                SQLite: the ordinary store
+│   ├── store.py            search, get a record, list with filters — plain SQL
+│   └── tools.py            the Records agent's tools
+├── guardrails.py           hop limits, support and lift thresholds, in one place
+├── ontology.py             load and validate the ontology; propose, review, apply
+├── proposals.py            the same, with Neo4j reloaded when changes are applied
+├── tools.py                both toolsets side by side, for the chat app, MCP and CLI
+├── chat/                   the tool-use loop, the shared system prompt, Compare's "only in" chips
+├── mcp/                    the optional MCP servers
+├── viewer/                 the ontology viewer and its Review page
+└── cli.py                  the command line
 ```
 
-The top level of `wander/` is the idea itself, and knows nothing about Claude. `tools.py` turns it into tools an agent can call; the subfolders are where the data lives and the ways in.
+The two stores are separate and each is written the way its database wants to be used: the graph side is Cypher that follows relationships; the records side is plain SQL that answers what you ask. `tools.py` puts their tools side by side for the chat app.
 
 | Elsewhere | What it is |
 |---|---|
 | `app.py`, `chainlit.md` | The chat app (Chainlit wants them at the root) |
-| `public/`, `.chainlit/config.toml` | The chat app's look: logo, avatars, colours, and the Records / Graph switch |
+| `public/`, `.chainlit/config.toml` | The chat app's look: logo, avatars, colours, the Compare / Records / Graph switch, and `elements/Compare.jsx` (the side-by-side answers) |
 | `ontology.yaml` | The live ontology (`ontology.initial.yaml` is the starting point) |
 | `data/generate.py`, `data/scenarios/` | The company and the five planted stories |
 | `data/generated/` | The generated data, committed so everyone gets the same |

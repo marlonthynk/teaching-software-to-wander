@@ -5,7 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import random
 
-from wander.stores.filters import matches
+from wander.filters import matches
 
 TODAY = dt.date(2026, 10, 1)  # "today" in the data. Never use the real clock.
 

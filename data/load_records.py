@@ -11,9 +11,9 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
+from data.source import read_generated, visible_data
 from wander.ontology import INITIAL_PATH, Ontology
-from wander.stores.graph import read_generated, visible_data
-from wander.stores.records import DB_PATH, SEARCH_TITLE, TABLES
+from wander.records.store import DB_PATH, SEARCH_TITLE, TABLES
 
 
 def load(path: Path = DB_PATH) -> dict[str, int]:
